@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="UserDayPlans" directorySegmentName="seg_0" id="358D453D-2970-161C-0ABF-1CCA1EE8E1A3">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-06 18:04:33 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<engineerTo>
+<item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
+</engineerTo>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>99BCA146-1E68-F285-38B7-78F16DB96400</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1918326F-431B-046E-AF51-67B6E46870C4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DishInstructions" directorySegmentName="seg_0" id="B0775C07-1A1C-533D-415F-610CA5B2DF31">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-06 18:02:57 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<engineerTo>
+<item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
+</engineerTo>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>33437243-9ECB-9E00-DB45-D0A075829475</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6C8B8C66-09C9-A6B2-FF53-55D85CB357CE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

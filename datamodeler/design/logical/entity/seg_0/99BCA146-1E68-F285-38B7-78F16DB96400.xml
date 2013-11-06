@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="99BCA146-1E68-F285-38B7-78F16DB96400" name="Users">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-06 17:58:12 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<engineerTo>
+<item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="FNAME" id="DB644C72-CAD2-0F05-C8ED-89E7AAD89457">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-06 18:00:15 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<engineerTo>
+<item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="LNAME" id="89654B0A-2209-E2B9-D7BC-31CBE1B09416">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-06 18:00:22 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<engineerTo>
+<item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="UNAME" id="6731DF2C-A223-E3BC-2307-60A2C5E6DC11">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-06 18:00:37 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<engineerTo>
+<item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="GENDER" id="7841503E-CB2A-C314-267C-655FB969791B">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-06 18:00:44 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<engineerTo>
+<item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+</Entity>

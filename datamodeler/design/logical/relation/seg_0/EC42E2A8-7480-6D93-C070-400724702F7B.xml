@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ShoppingListIngredients" directorySegmentName="seg_0" id="EC42E2A8-7480-6D93-C070-400724702F7B">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-06 18:06:30 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<engineerTo>
+<item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
+</engineerTo>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A24CA39A-7C7B-48A4-E977-AEE4364B3DA1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F61EB670-6B00-5FD2-3F6B-5F350B12B887</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
