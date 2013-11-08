@@ -1,22 +1,27 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <oracle.dbtools.crest.model.design.logical.LogicalDesign>
-   <object objectType="Entity" objectID="1918326F-431B-046E-AF51-67B6E46870C4" name="DayPlans" seqName="seg_0"/>
-   <object objectType="Entity" objectID="33437243-9ECB-9E00-DB45-D0A075829475" name="Course" seqName="seg_0"/>
-   <object objectType="Entity" objectID="6B086F9A-A947-707F-4B30-A255298A68E1" name="Recipee" seqName="seg_0"/>
    <object objectType="Entity" objectID="73DDA57A-3660-90AD-82BA-737A2E9FBF42" name="Attributes" seqName="seg_0"/>
+   <object objectType="Entity" objectID="33437243-9ECB-9E00-DB45-D0A075829475" name="Course" seqName="seg_0"/>
+   <object objectType="Entity" objectID="1918326F-431B-046E-AF51-67B6E46870C4" name="DayPlans" seqName="seg_0"/>
+   <object objectType="Entity" objectID="EFDF4433-5F78-1FA3-DE23-A45AD98E8C3E" name="DoctorRecommendation" seqName="seg_0"/>
    <object objectType="Entity" objectID="97D16DB3-E6F2-E8BE-3735-0D6719EF5D73" name="Emails" seqName="seg_0"/>
-   <object objectType="Entity" objectID="99BCA146-1E68-F285-38B7-78F16DB96400" name="Users" seqName="seg_0"/>
-   <object objectType="Entity" objectID="B13407A5-8A2F-D7EB-1450-770B51ACAC9D" name="Meals" seqName="seg_0"/>
-   <object objectType="Entity" objectID="D8B9D8B6-D3DC-B855-173A-24185A8AB981" name="Stores" seqName="seg_0"/>
-   <object objectType="Entity" objectID="E012B399-DA53-3166-AC44-4CCB7E23CC0A" name="Steps" seqName="seg_0"/>
    <object objectType="Entity" objectID="F61EB670-6B00-5FD2-3F6B-5F350B12B887" name="Ingredients" seqName="seg_0"/>
-   <object objectType="Relation" objectID="2A734093-4FD4-CD75-CB8D-8E8A63941C4F" name="UserEmails" seqName="seg_0"/>
-   <object objectType="Relation" objectID="358D453D-2970-161C-0ABF-1CCA1EE8E1A3" name="UserDayPlans" seqName="seg_0"/>
-   <object objectType="Relation" objectID="3A7DC85C-AE7D-EB86-7E65-E59B0BDC3EE7" name="MealsFoodAttributes" seqName="seg_0"/>
-   <object objectType="Relation" objectID="58C5F97F-9892-2AE9-E1C2-53697CFA5AA0" name="DayMeals" seqName="seg_0"/>
-   <object objectType="Relation" objectID="59B47EC8-4722-93DA-25E1-8E4888A51D9A" name="IngredientStores" seqName="seg_0"/>
-   <object objectType="Relation" objectID="5D4FA62E-D192-ED65-5032-3DA103540297" name="RecipeeSteps" seqName="seg_0"/>
-   <object objectType="Relation" objectID="5E99DAD0-9624-8339-E9CB-7E1D465D84F5" name="MealsDishes" seqName="seg_0"/>
-   <object objectType="Relation" objectID="722E85EF-DDF2-7CB6-A89B-50F032E48982" name="DishIngredients" seqName="seg_0"/>
+   <object objectType="Entity" objectID="B13407A5-8A2F-D7EB-1450-770B51ACAC9D" name="Meals" seqName="seg_0"/>
+   <object objectType="Entity" objectID="6B086F9A-A947-707F-4B30-A255298A68E1" name="Recipee" seqName="seg_0"/>
+   <object objectType="Entity" objectID="E012B399-DA53-3166-AC44-4CCB7E23CC0A" name="Steps" seqName="seg_0"/>
+   <object objectType="Entity" objectID="D8B9D8B6-D3DC-B855-173A-24185A8AB981" name="Stores" seqName="seg_0"/>
+   <object objectType="Entity" objectID="3A94892B-899F-5987-1D4D-F1CB6A66BA15" name="UserType" seqName="seg_0"/>
+   <object objectType="Entity" objectID="99BCA146-1E68-F285-38B7-78F16DB96400" name="Users" seqName="seg_0"/>
    <object objectType="Relation" objectID="F906B731-D559-34BB-23CB-E264750B669F" name="CourseRecipee" seqName="seg_0"/>
+   <object objectType="Relation" objectID="58C5F97F-9892-2AE9-E1C2-53697CFA5AA0" name="DayMeals" seqName="seg_0"/>
+   <object objectType="Relation" objectID="722E85EF-DDF2-7CB6-A89B-50F032E48982" name="DishIngredients" seqName="seg_0"/>
+   <object objectType="Relation" objectID="E49A6388-1F77-9E42-7E3C-42A2D067FA25" name="DoctorRecommendationAttributes" seqName="seg_0"/>
+   <object objectType="Relation" objectID="59B47EC8-4722-93DA-25E1-8E4888A51D9A" name="IngredientStores" seqName="seg_0"/>
+   <object objectType="Relation" objectID="5E99DAD0-9624-8339-E9CB-7E1D465D84F5" name="MealsDishes" seqName="seg_0"/>
+   <object objectType="Relation" objectID="3A7DC85C-AE7D-EB86-7E65-E59B0BDC3EE7" name="MealsFoodAttributes" seqName="seg_0"/>
+   <object objectType="Relation" objectID="5D4FA62E-D192-ED65-5032-3DA103540297" name="RecipeeSteps" seqName="seg_0"/>
+   <object objectType="Relation" objectID="358D453D-2970-161C-0ABF-1CCA1EE8E1A3" name="UserDayPlans" seqName="seg_0"/>
+   <object objectType="Relation" objectID="F9751B0D-F019-9C03-EE62-FEF9E30BE0F9" name="UserDoctorRecommendation" seqName="seg_0"/>
+   <object objectType="Relation" objectID="2A734093-4FD4-CD75-CB8D-8E8A63941C4F" name="UserEmails" seqName="seg_0"/>
+   <object objectType="Relation" objectID="578BCFCB-0F49-F1DD-4AD7-CD0F801C5C46" name="UserUserTypes" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.logical.LogicalDesign>
