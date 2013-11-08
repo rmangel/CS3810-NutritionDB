@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DoctorRecommendation" directorySegmentName="seg_0" id="29A46941-8F8F-B21E-F2FF-F54542FC9646">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-08 23:45:25 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>59338EA7-C15B-9157-165A-9F42DEC70C67</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EFDF4433-5F78-1FA3-DE23-A45AD98E8C3E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
