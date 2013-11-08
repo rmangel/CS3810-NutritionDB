@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6C8B8C66-09C9-A6B2-FF53-55D85CB357CE" name="PreperationInstructions">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="73DDA57A-3660-90AD-82BA-737A2E9FBF42" name="Attributes">
 <createdBy>jgillham</createdBy>
-<createdTime>2013-11-06 17:59:41 UTC</createdTime>
+<createdTime>2013-11-08 21:40:42 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
 <engineerTo>
 <item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="TEXT" id="539B8B21-8475-5F5B-F548-143A4C9DF3B0">
+<Attribute name="NAME" id="496122D6-8542-CB7A-E4F6-92DC00619FAC">
 <createdBy>jgillham</createdBy>
-<createdTime>2013-11-06 18:07:08 UTC</createdTime>
+<createdTime>2013-11-08 21:41:05 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
 <engineerTo>
 <item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
