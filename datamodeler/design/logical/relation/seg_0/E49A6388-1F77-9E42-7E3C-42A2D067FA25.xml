@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DoctorRecommendationAttributes" directorySegmentName="seg_0" id="E49A6388-1F77-9E42-7E3C-42A2D067FA25">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PrescriptionAttributes" directorySegmentName="seg_0" id="E49A6388-1F77-9E42-7E3C-42A2D067FA25">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-08 23:24:57 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
 <engineerTo>
-<item key="AE90ADA9-EDAD-7A71-488F-9968E955A9E6" value="true"/>
+<item key="44A62616-20E6-1299-413D-98E40BE0716D" value="true"/>
 </engineerTo>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
