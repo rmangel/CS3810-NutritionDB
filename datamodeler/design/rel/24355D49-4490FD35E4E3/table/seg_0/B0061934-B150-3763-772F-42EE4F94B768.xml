@@ -18,7 +18,7 @@
 <distinctType>DDC66547-94F6-C453-AFE6-099828B1E1D7</distinctType>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Recipee_Recipee_ID" id="A16ED3CD-B551-5B50-45E5-A91E7049DFB1">
+<Column name="RECIPEE_ID_FK" id="A16ED3CD-B551-5B50-45E5-A91E7049DFB1">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -34,7 +34,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="D1C16798-F7E1-30D0-08A4-DA537F971AB1" name="Steps_Recipee_FK">
+<ind_PK_UK id="D1C16798-F7E1-30D0-08A4-DA537F971AB1" name="Recipee_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>5D4FA62E-D192-ED65-5032-3DA103540297</generatorID>

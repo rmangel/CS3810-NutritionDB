@@ -18,7 +18,7 @@
 <distinctType>D930450F-3DDF-268B-E2EA-3BEAD5275BDA</distinctType>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Attributes_ID" id="D703923A-D9C4-7328-CA2D-78F56B2D067D">
+<Column name="ATTR_ID_PK" id="D703923A-D9C4-7328-CA2D-78F56B2D067D">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>

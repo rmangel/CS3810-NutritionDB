@@ -40,7 +40,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Ingredients_ID" id="3B1213E4-9E79-171E-BA98-87E7B8DAD794">
+<Column name="INGREDIENT_ID_PK" id="3B1213E4-9E79-171E-BA98-87E7B8DAD794">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -52,7 +52,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <isSurrogateColumn>true</isSurrogateColumn>
 </Column>
-<Column name="Course_Course_ID" id="B2A8CDB2-42D3-4F1B-020C-26F5687C19FF">
+<Column name="COURSE_ID_FK" id="B2A8CDB2-42D3-4F1B-020C-26F5687C19FF">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -79,7 +79,7 @@
 <colUsage columnID="3B1213E4-9E79-171E-BA98-87E7B8DAD794"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="C639B38D-6CAD-16EA-5432-99D2B753B450" name="Ingredients_Course_FK">
+<ind_PK_UK id="C639B38D-6CAD-16EA-5432-99D2B753B450" name="Course_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>722E85EF-DDF2-7CB6-A89B-50F032E48982</generatorID>

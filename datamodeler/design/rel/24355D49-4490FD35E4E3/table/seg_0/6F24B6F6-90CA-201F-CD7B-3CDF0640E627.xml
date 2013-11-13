@@ -18,7 +18,7 @@
 <distinctType>D930450F-3DDF-268B-E2EA-3BEAD5275BDA</distinctType>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Meals_ID" id="E8A565C8-2DAA-31B7-B2D2-477FC34CA130">
+<Column name="MEAL_ID_PK" id="E8A565C8-2DAA-31B7-B2D2-477FC34CA130">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -30,7 +30,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <isSurrogateColumn>true</isSurrogateColumn>
 </Column>
-<Column name="DayPlans_DayPlans_ID" id="C5966900-A218-9270-0C89-B34CA9F37FF2">
+<Column name="DAYPLAN_ID_FK" id="C5966900-A218-9270-0C89-B34CA9F37FF2">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -57,7 +57,7 @@
 <colUsage columnID="E8A565C8-2DAA-31B7-B2D2-477FC34CA130"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="63174783-2820-54D9-DBFC-C1BD9C6AFBD6" name="Meals_DayPlans_FK">
+<ind_PK_UK id="63174783-2820-54D9-DBFC-C1BD9C6AFBD6" name="DayPlan_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>58C5F97F-9892-2AE9-E1C2-53697CFA5AA0</generatorID>

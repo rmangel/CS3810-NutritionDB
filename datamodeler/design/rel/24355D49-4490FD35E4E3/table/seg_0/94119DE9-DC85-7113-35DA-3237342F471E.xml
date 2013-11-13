@@ -6,7 +6,7 @@
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Users_Users_ID" id="F72FC21D-2760-0C33-7ACA-67BED23F8455">
+<Column name="USER_ID_FK" id="F72FC21D-2760-0C33-7ACA-67BED23F8455">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -20,7 +20,7 @@
 <colAssociation fkAssociation="2470955A-B29E-D915-19B9-0E0551222BDF" referredColumn="E2924998-E872-24E9-00DF-B470C85611B9"/>
 </associations>
 </Column>
-<Column name="Meals_Meals_ID" id="631F5CFE-03A2-5A12-CD29-DF4F185FC6C2">
+<Column name="MEAL_ID_FK" id="631F5CFE-03A2-5A12-CD29-DF4F185FC6C2">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -36,7 +36,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="E275BB36-95A0-65EC-B172-A9F62457F4A3" name="UserFavoriteMeals__IDX">
+<ind_PK_UK id="E275BB36-95A0-65EC-B172-A9F62457F4A3" name="UserFavoriteMeals_PK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -48,7 +48,7 @@
 <colUsage columnID="631F5CFE-03A2-5A12-CD29-DF4F185FC6C2"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="293A9744-BF56-9A4E-E4F6-EBB8C31BB37C" name="FK_ASS_21">
+<ind_PK_UK id="293A9744-BF56-9A4E-E4F6-EBB8C31BB37C" name="User_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>471F98F0-8B71-01D0-1F75-FE310002457F</generatorID>
@@ -59,7 +59,7 @@
 <colUsage columnID="F72FC21D-2760-0C33-7ACA-67BED23F8455"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9C323D6D-F417-03D5-C1C5-E0D215DB61CD" name="FK_ASS_22">
+<ind_PK_UK id="9C323D6D-F417-03D5-C1C5-E0D215DB61CD" name="Meal_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>471F98F0-8B71-01D0-1F75-FE310002457F</generatorID>

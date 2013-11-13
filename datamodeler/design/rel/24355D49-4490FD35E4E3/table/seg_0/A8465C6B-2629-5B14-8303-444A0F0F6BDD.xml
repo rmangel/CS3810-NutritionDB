@@ -18,7 +18,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Meals_Meals_ID" id="BF12E1BC-FA4B-8C64-D552-2463455256C1">
+<Column name="MEAL_ID_FK" id="BF12E1BC-FA4B-8C64-D552-2463455256C1">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -32,7 +32,7 @@
 <colAssociation fkAssociation="8445F00D-1823-C391-3CE8-FE80534D2793" referredColumn="E8A565C8-2DAA-31B7-B2D2-477FC34CA130"/>
 </associations>
 </Column>
-<Column name="Users_Users_ID" id="6819D675-C0BE-6AD7-55E2-22936067F4E0">
+<Column name="USER_ID_FK" id="6819D675-C0BE-6AD7-55E2-22936067F4E0">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -48,7 +48,19 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="6CBB5B43-95D9-C110-88D5-18870FFE9B27" name="Ratings_Meals_FK">
+<ind_PK_UK id="3F636483-40C4-D790-3A14-178EC2D508AA" name="Ratings_PK">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:33:05 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF12E1BC-FA4B-8C64-D552-2463455256C1"/>
+<colUsage columnID="6819D675-C0BE-6AD7-55E2-22936067F4E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6CBB5B43-95D9-C110-88D5-18870FFE9B27" name="Meal_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>05277E69-A9A8-9228-2308-1126AA851653</generatorID>
@@ -59,7 +71,7 @@
 <colUsage columnID="BF12E1BC-FA4B-8C64-D552-2463455256C1"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="86EFA5DF-DBE3-8F59-80E3-BDC8A7D0A0CE" name="Ratings_Users_FK">
+<ind_PK_UK id="86EFA5DF-DBE3-8F59-80E3-BDC8A7D0A0CE" name="User_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>1BEB96CC-373B-7C49-55F2-817557832839</generatorID>

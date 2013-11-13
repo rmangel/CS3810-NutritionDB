@@ -6,7 +6,7 @@
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Meals_Meals_ID" id="56A4E176-CE19-80A6-B039-AF8B0EC95967">
+<Column name="MEAL_ID_FK" id="56A4E176-CE19-80A6-B039-AF8B0EC95967">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -20,7 +20,7 @@
 <colAssociation fkAssociation="76984999-E505-D315-4713-A5CE95DD3E4B" referredColumn="E8A565C8-2DAA-31B7-B2D2-477FC34CA130"/>
 </associations>
 </Column>
-<Column name="Course_Course_ID" id="40380FC2-413A-82D8-B3A9-94D617F2F83E">
+<Column name="COURSE_ID_FK" id="40380FC2-413A-82D8-B3A9-94D617F2F83E">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -31,12 +31,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="EE005049-F145-2A95-326F-5C06F15879A8" referredColumn="7929A6C8-AE7A-446B-D1B4-3E091D5231FB"/>
+<colAssociation fkAssociation="6B0B9047-D8EA-05A7-C1E7-4CDF229E0329" referredColumn="7929A6C8-AE7A-446B-D1B4-3E091D5231FB"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="3B8CF65A-73AB-F9AC-70E9-DAD2B4A07E82" name="MealsCourses__IDX">
+<ind_PK_UK id="3B8CF65A-73AB-F9AC-70E9-DAD2B4A07E82" name="MealsCourses_PK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -48,7 +48,7 @@
 <colUsage columnID="40380FC2-413A-82D8-B3A9-94D617F2F83E"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="B14C34D7-AB27-5911-A9F6-D84FF688E180" name="FK_ASS_10">
+<ind_PK_UK id="B14C34D7-AB27-5911-A9F6-D84FF688E180" name="Meal_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>5E99DAD0-9624-8339-E9CB-7E1D465D84F5</generatorID>
@@ -59,10 +59,17 @@
 <colUsage columnID="56A4E176-CE19-80A6-B039-AF8B0EC95967"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="3F7E1C24-9AC3-27EC-43F7-2003BB771485" name="FK_ASS_11">
+<ind_PK_UK id="3F7E1C24-9AC3-27EC-43F7-2003BB771485" name="Course_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>5E99DAD0-9624-8339-E9CB-7E1D465D84F5</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="9959F0A1-3A7D-6554-F475-10300EA7B8AC" name="MealsCourses_Course_FK">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:52:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>

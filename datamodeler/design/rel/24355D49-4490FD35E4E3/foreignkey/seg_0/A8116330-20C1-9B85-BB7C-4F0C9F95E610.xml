@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A8116330-20C1-9B85-BB7C-4F0C9F95E610" name="Steps_Recipee_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A8116330-20C1-9B85-BB7C-4F0C9F95E610" name="Recipee_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>5D4FA62E-D192-ED65-5032-3DA103540297</generatorID>

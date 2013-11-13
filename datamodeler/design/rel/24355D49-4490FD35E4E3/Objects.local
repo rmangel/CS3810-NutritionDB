@@ -14,29 +14,26 @@
    <object objectType="Table" objectID="A8465C6B-2629-5B14-8303-444A0F0F6BDD" name="Ratings" seqName="seg_0"/>
    <object objectType="Table" objectID="C695E2F4-B874-7381-C953-095AD6B7E68F" name="Recipee" seqName="seg_0"/>
    <object objectType="Table" objectID="B0061934-B150-3763-772F-42EE4F94B768" name="Steps" seqName="seg_0"/>
-   <object objectType="Table" objectID="8D4EAA18-FB8F-473C-6C50-4CE9D987A35A" name="Stores" seqName="seg_0"/>
    <object objectType="Table" objectID="94119DE9-DC85-7113-35DA-3237342F471E" name="UserFavoriteMeals" seqName="seg_0"/>
    <object objectType="Table" objectID="A362BE0B-979D-E099-B5AC-DEE5D42723D2" name="UserType" seqName="seg_0"/>
    <object objectType="Table" objectID="21E7A6EF-73B1-EFFD-0C7A-F2E195C928CF" name="Users" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="D67A153D-886E-319F-9891-0A0EE0292E08" name="DayPlans_Users_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="D6318532-75F5-C284-F03C-8F70400877D3" name="Dietition_Users_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="5A6C30F2-7797-FCE7-18D2-CC2E162595AB" name="Emails_Users_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="76984999-E505-D315-4713-A5CE95DD3E4B" name="FK_ASS_10" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="EE005049-F145-2A95-326F-5C06F15879A8" name="FK_ASS_11" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="C3335C7C-EA63-62B4-44B3-2C1BBA3A2B2C" name="FK_ASS_12" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="96D98A2E-3074-D6F4-9CEE-C063ADF4D5F6" name="FK_ASS_13" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="E0376D8E-9F56-6C86-C04D-FED1C382B8F8" name="FK_ASS_14" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="B2524945-F4CD-2CDF-475B-E3415FB69D66" name="FK_ASS_15" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="2470955A-B29E-D915-19B9-0E0551222BDF" name="FK_ASS_21" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="67144AA0-ECAB-A36D-1CF9-47E683FE51DE" name="FK_ASS_22" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="72224195-AD41-A8AB-B7E9-2A41AB699764" name="Ingredients_Course_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="632208C4-BFE8-2142-E490-983B6464C93C" name="Meals_DayPlans_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="E9E842EE-F4A0-AFEF-8751-C7F9996B3B29" name="Prescription_Dietition_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="2A773938-92D3-7776-E513-81381EB5AE42" name="Prescription_Users_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="8445F00D-1823-C391-3CE8-FE80534D2793" name="Ratings_Meals_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="9258967D-4A70-EC06-1922-AED9D819FC03" name="Ratings_Users_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="98FF5E23-D797-36AF-366C-621BAFEA6D3C" name="Recipee_Course_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="A8116330-20C1-9B85-BB7C-4F0C9F95E610" name="Steps_Recipee_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="597D071C-A073-0A51-147C-823E3919F629" name="Stores_Ingredients_FK" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="5CFED68D-43C3-4AF9-8C52-DF5738E5CF5D" name="Users_Dietition_FKv1" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="96D98A2E-3074-D6F4-9CEE-C063ADF4D5F6" name="Attribute_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="B2524945-F4CD-2CDF-475B-E3415FB69D66" name="Attributes_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="72224195-AD41-A8AB-B7E9-2A41AB699764" name="Course_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="632208C4-BFE8-2142-E490-983B6464C93C" name="DayPlan_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="E9E842EE-F4A0-AFEF-8751-C7F9996B3B29" name="Dietition_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="6B0B9047-D8EA-05A7-C1E7-4CDF229E0329" name="MealsCourses_Course_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="76984999-E505-D315-4713-A5CE95DD3E4B" name="Meal_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="C3335C7C-EA63-62B4-44B3-2C1BBA3A2B2C" name="Meal_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="67144AA0-ECAB-A36D-1CF9-47E683FE51DE" name="Meal_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="8445F00D-1823-C391-3CE8-FE80534D2793" name="Meal_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="E0376D8E-9F56-6C86-C04D-FED1C382B8F8" name="Prescription_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="A8116330-20C1-9B85-BB7C-4F0C9F95E610" name="Recipee_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="5CFED68D-43C3-4AF9-8C52-DF5738E5CF5D" name="UserType_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="D67A153D-886E-319F-9891-0A0EE0292E08" name="User_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="D6318532-75F5-C284-F03C-8F70400877D3" name="User_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="5A6C30F2-7797-FCE7-18D2-CC2E162595AB" name="User_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="2470955A-B29E-D915-19B9-0E0551222BDF" name="User_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="2A773938-92D3-7776-E513-81381EB5AE42" name="User_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="9258967D-4A70-EC06-1922-AED9D819FC03" name="User_FK" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.relational.RelationalDesign>

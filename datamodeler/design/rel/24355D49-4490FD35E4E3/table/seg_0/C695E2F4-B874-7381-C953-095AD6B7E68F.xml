@@ -29,7 +29,7 @@
 <distinctType>D930450F-3DDF-268B-E2EA-3BEAD5275BDA</distinctType>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Recipee_ID" id="B8F2A92A-CA2C-5F56-59A9-A847E9BB21B4">
+<Column name="RECIPEE_ID_PK" id="B8F2A92A-CA2C-5F56-59A9-A847E9BB21B4">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -40,21 +40,6 @@
 <identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <isSurrogateColumn>true</isSurrogateColumn>
-</Column>
-<Column name="Course_Course_ID" id="72714B81-AC6E-7413-6419-3D534808C72C">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-13 23:04:26 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<delegate>7929A6C8-AE7A-446B-D1B4-3E091D5231FB</delegate>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="98FF5E23-D797-36AF-366C-621BAFEA6D3C" referredColumn="7929A6C8-AE7A-446B-D1B4-3E091D5231FB"/>
-</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -68,27 +53,13 @@
 <colUsage columnID="B8F2A92A-CA2C-5F56-59A9-A847E9BB21B4"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="755D0448-BAF0-E2BA-245F-3D2B430FBDDE" name="Recipee__IDX">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-13 23:04:26 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Unique Plain Index</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<relationGeneratorID>F906B731-D559-34BB-23CB-E264750B669F</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="72714B81-AC6E-7413-6419-3D534808C72C"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="48B15D66-C282-EEA6-7F0C-250AE2E0AF87" name="Recipee_Course_FK">
+<ind_PK_UK id="48B15D66-C282-EEA6-7F0C-250AE2E0AF87" name="Course_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>F906B731-D559-34BB-23CB-E264750B669F</generatorID>
 <ownerDesignName>design</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="72714B81-AC6E-7413-6419-3D534808C72C"/>
-</indexColumnUsage>
 </ind_PK_UK>
 </indexes>
 </Table>

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E9E842EE-F4A0-AFEF-8751-C7F9996B3B29" name="Prescription_Dietition_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E9E842EE-F4A0-AFEF-8751-C7F9996B3B29" name="Dietition_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>29A46941-8F8F-B21E-F2FF-F54542FC9646</generatorID>

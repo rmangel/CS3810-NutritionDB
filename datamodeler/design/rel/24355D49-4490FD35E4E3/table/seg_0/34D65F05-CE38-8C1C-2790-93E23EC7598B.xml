@@ -18,7 +18,7 @@
 <distinctType>CB7ACEDA-ACEF-FBB4-0829-DA46263824F1</distinctType>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="DayPlans_ID" id="ED1E1A08-8972-577A-D33A-E5B394787618">
+<Column name="DAYPLAN_ID_PK" id="ED1E1A08-8972-577A-D33A-E5B394787618">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -30,7 +30,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <isSurrogateColumn>true</isSurrogateColumn>
 </Column>
-<Column name="Users_Users_ID" id="47EAE465-6185-DAE4-C98C-68D7CD06EAA0">
+<Column name="USER_ID_FK" id="47EAE465-6185-DAE4-C98C-68D7CD06EAA0">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -46,7 +46,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="FEF3376D-18AC-638D-24CB-59767E8D8719" name="DayPlans_PK">
+<ind_PK_UK id="FEF3376D-18AC-638D-24CB-59767E8D8719" name="DayPlan_PK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>
@@ -56,7 +56,7 @@
 <colUsage columnID="ED1E1A08-8972-577A-D33A-E5B394787618"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="EE7568D3-72B3-428D-A371-F52930C3A8BE" name="DayPlans_Users_FK">
+<ind_PK_UK id="EE7568D3-72B3-428D-A371-F52930C3A8BE" name="User_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-13 23:04:26 UTC</createdTime>
 <generatorID>358D453D-2970-161C-0ABF-1CCA1EE8E1A3</generatorID>
