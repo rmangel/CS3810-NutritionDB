@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A8116330-20C1-9B85-BB7C-4F0C9F95E610" name="Steps_Recipee_FK">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<generatorID>5D4FA62E-D192-ED65-5032-3DA103540297</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<containerWithKeyObject>B0061934-B150-3763-772F-42EE4F94B768</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>D1C16798-F7E1-30D0-08A4-DA537F971AB1</localFKIndex>
+<keyObject>856E2F5B-2AF6-8EFC-5F53-F4BC5FB1FA42</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

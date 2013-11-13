@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E863638C-B30C-40CE-0A30-269EDDE305DF" name="Emails">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<generatorID>97D16DB3-E6F2-E8BE-3735-0D6719EF5D73</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ADDRESS" id="A43A881E-17F2-6740-AA6A-DE8D2EDDDBC6">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<generatorID>3ABD193D-CC80-6B2A-B632-A3A87C4CFF52</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>2</use>
+<distinctType>DDC66547-94F6-C453-AFE6-099828B1E1D7</distinctType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Users_Users_ID" id="8CC374EB-EC71-7F21-E1F6-0A6681D81524">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>E2924998-E872-24E9-00DF-B470C85611B9</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5A6C30F2-7797-FCE7-18D2-CC2E162595AB" referredColumn="E2924998-E872-24E9-00DF-B470C85611B9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7B9F1974-8C4A-EBF7-41C2-E7F6B356117E" name="Emails_Users_FK">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<generatorID>2A734093-4FD4-CD75-CB8D-8E8A63941C4F</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CC374EB-EC71-7F21-E1F6-0A6681D81524"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

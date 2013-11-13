@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DFD1F972-4B0B-10F7-F6BB-DEF0FD2D8155" name="MealsCourses">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Meals_Meals_ID" id="56A4E176-CE19-80A6-B039-AF8B0EC95967">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>E8A565C8-2DAA-31B7-B2D2-477FC34CA130</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="76984999-E505-D315-4713-A5CE95DD3E4B" referredColumn="E8A565C8-2DAA-31B7-B2D2-477FC34CA130"/>
+</associations>
+</Column>
+<Column name="Course_Course_ID" id="40380FC2-413A-82D8-B3A9-94D617F2F83E">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>7929A6C8-AE7A-446B-D1B4-3E091D5231FB</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE005049-F145-2A95-326F-5C06F15879A8" referredColumn="7929A6C8-AE7A-446B-D1B4-3E091D5231FB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3B8CF65A-73AB-F9AC-70E9-DAD2B4A07E82" name="MealsCourses__IDX">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="56A4E176-CE19-80A6-B039-AF8B0EC95967"/>
+<colUsage columnID="40380FC2-413A-82D8-B3A9-94D617F2F83E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B14C34D7-AB27-5911-A9F6-D84FF688E180" name="FK_ASS_10">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<generatorID>5E99DAD0-9624-8339-E9CB-7E1D465D84F5</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="56A4E176-CE19-80A6-B039-AF8B0EC95967"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3F7E1C24-9AC3-27EC-43F7-2003BB771485" name="FK_ASS_11">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<generatorID>5E99DAD0-9624-8339-E9CB-7E1D465D84F5</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="40380FC2-413A-82D8-B3A9-94D617F2F83E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

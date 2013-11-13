@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B0061934-B150-3763-772F-42EE4F94B768" name="Steps">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<generatorID>E012B399-DA53-3166-AC44-4CCB7E23CC0A</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TEXT" id="6D56E04C-9600-D8B8-F6CA-506D4ADB118C">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<generatorID>C9444758-6F44-DF44-DAFC-39E6E993083D</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>2</use>
+<distinctType>DDC66547-94F6-C453-AFE6-099828B1E1D7</distinctType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Recipee_Recipee_ID" id="A16ED3CD-B551-5B50-45E5-A91E7049DFB1">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>B8F2A92A-CA2C-5F56-59A9-A847E9BB21B4</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A8116330-20C1-9B85-BB7C-4F0C9F95E610" referredColumn="B8F2A92A-CA2C-5F56-59A9-A847E9BB21B4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D1C16798-F7E1-30D0-08A4-DA537F971AB1" name="Steps_Recipee_FK">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-13 23:04:26 UTC</createdTime>
+<generatorID>5D4FA62E-D192-ED65-5032-3DA103540297</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A16ED3CD-B551-5B50-45E5-A91E7049DFB1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
