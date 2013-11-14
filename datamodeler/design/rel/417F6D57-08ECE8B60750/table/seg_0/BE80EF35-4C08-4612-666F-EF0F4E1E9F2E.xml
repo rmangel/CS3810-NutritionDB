@@ -49,12 +49,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<delegate>A034F415-CE3E-32DE-30C9-F7A05818E16D</delegate>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="48327AD0-4440-E2B7-EEF0-5098B4FF6287" referredColumn="A034F415-CE3E-32DE-30C9-F7A05818E16D"/>
-</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -75,17 +71,6 @@
 <indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <relationGeneratorID>F906B731-D559-34BB-23CB-E264750B669F</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="39D14420-4782-570A-615D-14AC6DBE21D1"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="69005AA4-E1FF-097D-832D-2EF7AA94CFD1" name="Course_Recipee_FK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>F906B731-D559-34BB-23CB-E264750B669F</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="39D14420-4782-570A-615D-14AC6DBE21D1"/>
 </indexColumnUsage>

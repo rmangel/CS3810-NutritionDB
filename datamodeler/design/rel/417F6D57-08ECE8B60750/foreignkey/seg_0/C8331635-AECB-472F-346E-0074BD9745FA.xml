@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C8331635-AECB-472F-346E-0074BD9745FA" name="Dietition_Prescription_FK">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-14 20:05:10 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<containerWithKeyObject>22DA4AA8-2800-093F-1205-F92F7F56AFDE</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>D18A3C2A-B61F-C04F-8ADC-868214D3BF90</localFKIndex>
+<keyObject>E9A91654-B377-B7AB-22FA-4682A09036D1</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
