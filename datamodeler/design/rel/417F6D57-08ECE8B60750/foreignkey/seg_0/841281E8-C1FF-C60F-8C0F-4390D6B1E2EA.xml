@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="841281E8-C1FF-C60F-8C0F-4390D6B1E2EA" name="Ingredients_Course_FK">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-14 19:37:04 UTC</createdTime>
+<generatorID>722E85EF-DDF2-7CB6-A89B-50F032E48982</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<containerWithKeyObject>D960A2D4-7955-6CAE-1421-510400FB0C36</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>66A54A57-3B37-8351-0A5B-5E2C6A18A187</localFKIndex>
+<keyObject>41353BAC-F104-C90C-7CF1-44B14E0A11D7</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

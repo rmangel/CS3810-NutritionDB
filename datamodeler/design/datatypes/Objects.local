@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <oracle.dbtools.crest.model.design.datatypes.DataTypesDesign>
+   <object objectType="DistinctType" objectID="360FAF95-6453-E25D-DAD7-763D05E4858D" name="tPassword" seqName="seg_0"/>
+   <object objectType="DistinctType" objectID="CB7ACEDA-ACEF-FBB4-0829-DA46263824F1" name="tDate" seqName="seg_0"/>
    <object objectType="DistinctType" objectID="D930450F-3DDF-268B-E2EA-3BEAD5275BDA" name="tName" seqName="seg_0"/>
    <object objectType="DistinctType" objectID="DDC66547-94F6-C453-AFE6-099828B1E1D7" name="tDescription" seqName="seg_0"/>
-   <object objectType="DistinctType" objectID="CB7ACEDA-ACEF-FBB4-0829-DA46263824F1" name="tDate" seqName="seg_0"/>
-   <object objectType="DistinctType" objectID="360FAF95-6453-E25D-DAD7-763D05E4858D" name="tPassword" seqName="seg_0"/>
    <object objectType="StructuredType" objectID="47E390DE-0671-C4B1-8428-0F45CBEE18F8" name="SDO_GEOMETRY" seqName="seg_0"/>
    <object objectType="StructuredType" objectID="F72C39E0-D1CA-8821-2AD7-A1E95A37D3D1" name="XMLTYPE" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.datatypes.DataTypesDesign>

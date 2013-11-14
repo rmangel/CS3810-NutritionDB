@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D960A2D4-7955-6CAE-1421-510400FB0C36" name="Ingredients">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-14 19:37:04 UTC</createdTime>
+<generatorID>F61EB670-6B00-5FD2-3F6B-5F350B12B887</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NAME" id="0CAECE6F-98A4-C0CA-DE9A-0485AC44B7C9">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-14 19:37:04 UTC</createdTime>
+<generatorID>305F9B8C-EFA4-6292-C495-4C8453B2488C</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>2</use>
+<distinctType>D930450F-3DDF-268B-E2EA-3BEAD5275BDA</distinctType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FAT" id="0774CCA9-2B36-9863-C4DD-1D6DB6FA6AB3">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-14 19:37:04 UTC</createdTime>
+<generatorID>6F4AB376-1D12-8CA4-7056-CD7886B79819</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CALORIES" id="AA7F106F-1EC3-0022-2AEA-1F58C7F77650">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-14 19:37:04 UTC</createdTime>
+<generatorID>4620A862-8E1B-2641-1ADD-0D033342ABE6</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ingredients_ID" id="A5358733-7B1A-AAB0-A654-F22FF83D5BDD">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-14 19:37:04 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="Course_Course_ID" id="3DA43631-D694-98DB-AB8F-FE57BBFEDC5F">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-14 19:37:04 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>6DDAD819-341C-EA00-FF4B-95D131EBEE83</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="841281E8-C1FF-C60F-8C0F-4390D6B1E2EA" referredColumn="6DDAD819-341C-EA00-FF4B-95D131EBEE83"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B7BE7164-37C4-DD5C-EB1C-A01609477FBE" name="Ingredients_PK">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-14 19:37:04 UTC</createdTime>
+<ownerDesignName>design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="A5358733-7B1A-AAB0-A654-F22FF83D5BDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66A54A57-3B37-8351-0A5B-5E2C6A18A187" name="Ingredients_Course_FK">
+<createdBy>jgillham</createdBy>
+<createdTime>2013-11-14 19:37:04 UTC</createdTime>
+<generatorID>722E85EF-DDF2-7CB6-A89B-50F032E48982</generatorID>
+<ownerDesignName>design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DA43631-D694-98DB-AB8F-FE57BBFEDC5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
