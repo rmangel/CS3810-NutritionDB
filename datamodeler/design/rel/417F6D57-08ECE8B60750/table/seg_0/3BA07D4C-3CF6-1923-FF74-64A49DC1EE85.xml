@@ -55,23 +55,7 @@
 <colUsage columnID="C3A1992E-01EA-9B79-668D-37CAA4109B42"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="A8F6942F-8BC0-1F0B-BEA7-BF5578F2D1F6" name="Prescription_Dietition_FK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>29A46941-8F8F-B21E-F2FF-F54542FC9646</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-</ind_PK_UK>
-<ind_PK_UK id="97C50E1B-466F-77E3-0FB2-81807A9A122E" name="Prescription_Users_FK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>F9751B0D-F019-9C03-EE62-FEF9E30BE0F9</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-</ind_PK_UK>
-<ind_PK_UK id="9BD3BA9A-48F7-83BE-9AEF-EF63B67AAEC0" name="Prescription_Users_FKv2">
+<ind_PK_UK id="9BD3BA9A-48F7-83BE-9AEF-EF63B67AAEC0" name="Prescription_Users_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-14 20:02:01 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>

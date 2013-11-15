@@ -45,15 +45,7 @@
 <colUsage columnID="90399AC5-4822-2B4A-669E-48565C6E47A8"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="42ADF784-C8FF-ED29-E6DC-4ADA2E0B081F" name="Dietition_Users_FK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>B24AEF43-FE65-494F-6DDA-C2BC38A64853</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-</ind_PK_UK>
-<ind_PK_UK id="3FD9D96E-F937-3865-06C5-09DCEB289802" name="Dietition_Users_FKv1">
+<ind_PK_UK id="3FD9D96E-F937-3865-06C5-09DCEB289802" name="Dietition_Users_FK">
 <createdBy>jgillham</createdBy>
 <createdTime>2013-11-14 20:03:49 UTC</createdTime>
 <ownerDesignName>design</ownerDesignName>

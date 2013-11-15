@@ -28,11 +28,11 @@
    <object objectType="FKIndexAssociation" objectID="03EC66EC-F949-04D4-F591-FDBC161A98A4" name="FK_ASS_15" seqName="seg_0"/>
    <object objectType="FKIndexAssociation" objectID="8141DEA4-C5C1-030F-B46E-6C0DC43CFE82" name="FK_ASS_21" seqName="seg_0"/>
    <object objectType="FKIndexAssociation" objectID="1AB2883F-19FE-AD48-6413-4DF2B4F67C13" name="FK_ASS_22" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="5C0AFD81-043C-4E6E-2317-31200F50C4FA" name="UserType_Users_FK" seqName="seg_0"/>
    <object objectType="FKIndexAssociation" objectID="841281E8-C1FF-C60F-8C0F-4390D6B1E2EA" name="Ingredients_Course_FK" seqName="seg_0"/>
    <object objectType="FKIndexAssociation" objectID="D5ECCD46-667E-A005-7414-E3807B89AA3B" name="Meals_DayPlans_FK" seqName="seg_0"/>
    <object objectType="FKIndexAssociation" objectID="1B733509-E7CD-2431-9F00-28A9CBCB0910" name="Prescription_Users_FK" seqName="seg_0"/>
    <object objectType="FKIndexAssociation" objectID="9DABC9AB-8046-298A-6BBF-C0E75820808A" name="Ratings_Meals_FK" seqName="seg_0"/>
    <object objectType="FKIndexAssociation" objectID="4BB68067-5560-A227-7080-FD3D26691231" name="Ratings_Users_FK" seqName="seg_0"/>
    <object objectType="FKIndexAssociation" objectID="0EB831C5-8FDE-6619-30AB-E6B312BEDF44" name="Stores_Ingredients_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="5C0AFD81-043C-4E6E-2317-31200F50C4FA" name="UserType_Users_FK" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.relational.RelationalDesign>

@@ -87,29 +87,5 @@
 <colUsage columnID="8DAD3489-09B1-7067-A9B3-5E9A2A097B6E"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="CA17C5A4-655E-B34B-FB4E-0341FCE76A42" name="Users_Dietition_FK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>B24AEF43-FE65-494F-6DDA-C2BC38A64853</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-</ind_PK_UK>
-<ind_PK_UK id="E8FCBAE5-563F-E74E-96F1-F01D67CFC165" name="Users_Prescription_FK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>F9751B0D-F019-9C03-EE62-FEF9E30BE0F9</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-</ind_PK_UK>
-<ind_PK_UK id="045DFA79-8061-2D68-C32B-992261187055" name="Users_UserType_FK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>578BCFCB-0F49-F1DD-4AD7-CD0F801C5C46</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-</ind_PK_UK>
 </indexes>
 </Table>
