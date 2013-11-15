@@ -217,40 +217,95 @@ This process modifies the database information about customers and or meals.
 \end{enumerate}
 \end{mySubsection}
 \begin{mySubsection}{Business rules}
+\renewcommand{\labelenumi}{}
+\renewcommand{\labelenumii}{\arabic{enumii}. }
+\begin{enumerate}
+\item
 Dietitians
+\begin{enumerate}
+\item
 Only doctors may prescribe a dietary recommendation.
+\item
 Meals
+\item
 Meals will be  allowed in three categories: Regular, Gluten-free, Vegetarian. 
+\item
 Each customer will be allowed to customize their meal choices using those three options. 
+\item
 Decisions for each weeks meal plan will be made based upon the ratings collected from the customers
+\item
 Each meal will be set to a 2 serving default, which can be changed by the user.
+\end{enumerate}
+\item
 Customers
+\begin{enumerate}
+\item
 Customers must create their own personal log in in order to use the like and dislike feature of the meals.
+\item
 Customers can never see more than a weeks worth of meals in order to limit their access to the meals
 Meals put on the customers dislike list will be banned from returning to that users weekly meal plan. If a meal in the administrative weekly plan conflicts with the users dislike list a replacement meal will be provided for the customer. 
+\item
 A user shall have a limit of no more than 3000 calories per day in meals.
+\item
 A user shall be given exactly 3 meals for a day.
+\item
 A user shall not be given meals that go against the limitations set by their dietitian.
+\end{enumerate}
+\item
 Ratings
+\begin{enumerate}
+\item
 Ratings will be updated after each week, and will be a major determining factor in the administrators decisions about the meal schedule each week.
+\end{enumerate}
+\item
 Updates
+\begin{enumerate}
+\item
 Users will be allowed to recommend new recipes to the administrators 
+\end{enumerate}
+\end{enumerate}
 \end{mySubsection}
  
  
 \begin{mySubsection}{Screens}
- 
-1.     Main screen
-a.    Login
-b.    Create new user
-2.     Home Screen
-a.    List of meals for the week
-                                              i. 	Each meal will have thumbs up or thumbs down which are clickable
-b.    Settings button
-c.     Filter button
-                                              i. 	Price
-                                            ii. 	Meal type
-                                          iii. 	Meal ingredients(chicken, Steak… etc..)
-d.    Log out Button
+\renewcommand{\labelenumi}{\arabic{enumi}. }
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}. }
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}. }
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}. }
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}. }
+\begin{enumerate}
+\item
+Main screen
+\begin{enumerate}
+\item
+Login
+\item
+Create new user
+\end{enumerate}
+\item
+Home Screen
+\begin{enumerate}
+\item
+List of meals for the week
+\begin{enumerate}
+\item
+Each meal will have thumbs up or thumbs down which are clickable.
+\end{enumerate}
+\item
+Settings button
+\item
+Filter button
+\begin{enumerate}
+\item
+Price
+\item
+Meal type
+\item
+Meal ingredients(chicken, Steak… etc..)
+\end{enumerate}
+\item
+Log out Button
+\end{enumerate}
+\end{enumerate}
 \end{mySubsection}
 \end{document}
