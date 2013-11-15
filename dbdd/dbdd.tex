@@ -71,6 +71,12 @@ The limited user will also use the tool to find the recipe with step-by-step pre
 The doctor user will be able to prescribe dietary recommendations for a set of users.
 \end{mySubsection}
 \begin{mySubsection}{Primary Project Requirements}
+\renewcommand{\labelenumi}{\arabic{enumi}. }
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}. }
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}. }
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}. }
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}. }
+
 \begin{enumerate}
 \item
 There will be a relation of meals.
@@ -100,30 +106,39 @@ Each course will have a serving size, calorie count, and fat count.
 \end{enumerate}
 \item
 There will be a relation of users.
+\begin{enumerate}
 \item
 Each user will have a user name, First and last name, and email address.
 \item
 Each user may have many meal plans (usually not more than 3 or less than 1) per day.
+\begin{enumerate}
 \item
 A meal plan is a list of meals per day.
+\end{enumerate}
 \item
 Each user will have a list of favorite meals.
 \item
 Each user will have an optional rating per meal.
 \item
 The system will determine the average rating per meal.
+\end{enumerate}
 \item
 There will be a GUI.
+\begin{enumerate}
 \item
 The GUI will be a set of views. Where each view is tailored to the user type and the activity.
+\begin{enumerate}
 \item
 The user type may be “limited” or may be “admin”.
+\begin{enumerate}
 \item
 “limited” types will be limited on which activities they can interact with.
 \item
 “admin” types will have no limits on which activities they can interact with.
+\end{enumerate}
 \item
 Each activity will take a specific action on the database or obtain results.
+\begin{enumerate}
 \item
 Find Meals: this activity will allow the user to find a meal from the list of available meals.
 \item
@@ -141,30 +156,65 @@ Change Course (admin): allows the user to modify the ingredients in the course.
 \item
 Change Stores (admin): allows the user to associate or unassociate stores with ingredients and also to change the price.
 \end{enumerate}
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
 \end{mySubsection}
 \begin{mySubsection}{Data Requirements}
+\begin{itemize}
+\item
 Each meal will consist of Preparation instructions, Ingredients, a shopping list, an adjustable serving size, and a price range. Any customer will be able to query the meals by price range in order for them to be able to stay within a certain budget.
+\item
 Each Customer will have their own ID, name, password, security questions and address. They will also have a list of favorite meals along with a list of meals they do not like.
+\item
 There will also be a list of meals that are gluten free and or vegetarian. These meals will be stored within the other meals but will only be displayed if they are specifically requested by the customer.
+\item
 Each meal will have a rating generator that will come from the rating from each customer and be averaged to create an overall rating.
+\end{itemize}
 \end{mySubsection}
 \begin{mySubsection}{Users}
-[limited] This user can consume the service, but, not perform any administrative or doctoral actions. The user may browse the meal catalog, rate meals, favorite meals, view/print shopping lists, and view/print weekly meal schedule.
-[doctor] This user can consume the service like the limited user, but, can also prescribe a diet recommendation to a specific user.
-[admin] This user has no limitations accessible activities.
+\renewcommand{\labelenumi}{}
+\renewcommand{\labelenumii}{}
+\begin{enumerate}
+\item {[limited]}
+This user can consume the service, but, not perform any administrative or doctoral actions. The user may browse the meal catalog, rate meals, favorite meals, view/print shopping lists, and view/print weekly meal schedule.
+
+\item {[doctor]}
+This user can consume the service like the limited user, but, can also prescribe a diet recommendation to a specific user.
+
+\item {[admin]}
+This user has no limitations accessible activities.
+\end{enumerate}
 \end{mySubsection}
 \begin{mySubsection}{Functional Requirements}
 There are four types of processes that are relevant:
-
+\renewcommand{\labelenumi}{}
+\renewcommand{\labelenumii}{}
+\begin{enumerate}
+\item
 Limited User
-[Browse] This process allows customers to query the database to find certain meals. The customer may select a meal and add that meal to their daily meal plan.
-[Favorite] This process takes a meal out of the big list of meals and places it into the customers favorite list
-[Unfavorite] This process removes the meal from the customers favorite list.
-[Rate] This process will allow the users to rate the meals which will allow the administrators to keep track of meals that people are enjoying along with ones that are not doing very well.
-Dietitian User
-[Prescribe] This process allows the doctor to make a dietary recommendation.
+\begin{enumerate}
+\item {[Browse]}
+This process allows customers to query the database to find certain meals. The customer may select a meal and add that meal to their daily meal plan.
+\item {[Favorite]}
+This process takes a meal out of the big list of meals and places it into the customers favorite list.
+\item {[Unfavorite]}
+This process removes the meal from the customers favorite list.
+\item {[Rate]}
+This process will allow the users to rate the meals which will allow the administrators to keep track of meals that people are enjoying along with ones that are not doing very well.
+\end{enumerate}
+\item Dietitian User
+\begin{enumerate}
+\item {[Prescribe]}
+This process allows the doctor to make a dietary recommendation.
+\end{enumerate}
+\item
 Admin User
-[admin] This process modifies the database information about customers and or meals.
+\begin{enumerate}
+\item {[admin]}
+This process modifies the database information about customers and or meals.
+\end{enumerate}
+\end{enumerate}
 \end{mySubsection}
 \begin{mySubsection}{Business rules}
 Dietitians
