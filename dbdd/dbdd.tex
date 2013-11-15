@@ -1,0 +1,206 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+\newcommand*\docauthor{
+Josh Gillham
+\\
+Randy Mangel
+\\
+Sann
+\\
+Daniel
+}
+\newcommand*\doctitle{The Weekly Meal Planner DBDD}
+\newcommand*\className{CS3810}
+
+\author{\docauthor}
+\title{\doctitle}
+
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amssymb}
+
+\input{res/cmd.tex}
+\input{res/env.tex}
+\input{res/header.tex}
+
+\begin{document}
+\myFirstPageHeader
+\begin{mySubsection}{Description}
+\noindent
+The weekly meal planner is designed to serve anyone and everyone.
+As a website/mobile app anyone around the world will be able to access it.
+It will be providing people with a different meal for every day of the week along with giving them options such as gluten-free or vegetarian.
+Customers will be allowed to create a personal log in in order for them to mark favorites and keep track of the meals they have already tried.
+\end{mySubsection}
+\begin{mySubsection}{CONOPS}
+\noindent
+There will be three different types of users: limited, doctor, and admin.
+Each user will play a different role.
+The limited user will consume the service but will not have the power to prescribe dietary recommendations.
+The doctor will have all the abilities of the limited user but will also be able to prescribe dietary recommendations.
+The admin user will not be limited.
+The admin will be responsible for maintaining the database, correcting errors, and will be used by developers.
+\newline
+
+\noindent
+The service will be a meal management and scheduling tool for limited user.
+The limited user may find meals in the catalog.
+They may rate, favorite, or select meals.
+They may rate meals on a scale of 0 to 5 stars.
+They may add the meal to the list of their favorites.
+They may select meals and schedule a meal for a particular day and time (morning, noon, afternoon, and evening).
+\newline
+
+\noindent
+The limited user will use the tool to track their meal schedule.
+The user will be able to see a calendar showing their meal plans.
+The user may delete or replace meals on their schedule.
+\newline
+
+\noindent
+The limited user will use the tool to generate a shopping list.
+The shopping list will help the user estimate the cost of food and help them find stores where the item might be sold.
+\newline
+
+\noindent
+The limited user will also use the tool to find the recipe with step-by-step preparation instructions.
+\newline
+
+\noindent
+The doctor user will be able to prescribe dietary recommendations for a set of users.
+\end{mySubsection}
+\begin{mySubsection}{Primary Project Requirements}
+\begin{enumerate}
+\item
+There will be a relation of meals.
+\begin{enumerate}
+\item
+Each meal will have a minimum of 1 course.
+\begin{enumerate}
+\item
+A course is a dish or meal that represents one type of food.
+\item
+Each course will have ingredients.
+\begin{enumerate}
+\item
+Each ingredient may have many different stores where the item can be purchased.
+\item
+Each ingredient-store relationship will have a price.
+\end{enumerate}
+\item
+Each course will have preparation instructions.
+\begin{enumerate}
+\item
+Each preparation instructions will have a list of at least 1 step(s).
+\end{enumerate}
+\item
+Each course will have a serving size, calorie count, and fat count.
+\end{enumerate}
+\end{enumerate}
+\item
+There will be a relation of users.
+\item
+Each user will have a user name, First and last name, and email address.
+\item
+Each user may have many meal plans (usually not more than 3 or less than 1) per day.
+\item
+A meal plan is a list of meals per day.
+\item
+Each user will have a list of favorite meals.
+\item
+Each user will have an optional rating per meal.
+\item
+The system will determine the average rating per meal.
+\item
+There will be a GUI.
+\item
+The GUI will be a set of views. Where each view is tailored to the user type and the activity.
+\item
+The user type may be “limited” or may be “admin”.
+\item
+“limited” types will be limited on which activities they can interact with.
+\item
+“admin” types will have no limits on which activities they can interact with.
+\item
+Each activity will take a specific action on the database or obtain results.
+\item
+Find Meals: this activity will allow the user to find a meal from the list of available meals.
+\item
+Add Meal: this allows the user to add a meal to a particular day plan.
+\item
+Remove Meal: this allows the user to remove a meal from a particular day plan.
+\item
+View/Print Shopping List: this allows the user to generate and print a shopping list for day’s or a set of days’ meal plans.
+\item
+Rate Meal: this allows the user to give the system feedback per meal on a scale of 0 to 5 stars.
+\item
+Change Meal (admin): allows the user to modify the courses in the meal.
+\item
+Change Course (admin): allows the user to modify the ingredients in the course.
+\item
+Change Stores (admin): allows the user to associate or unassociate stores with ingredients and also to change the price.
+\end{enumerate}
+\end{mySubsection}
+\begin{mySubsection}{Data Requirements}
+Each meal will consist of Preparation instructions, Ingredients, a shopping list, an adjustable serving size, and a price range. Any customer will be able to query the meals by price range in order for them to be able to stay within a certain budget.
+Each Customer will have their own ID, name, password, security questions and address. They will also have a list of favorite meals along with a list of meals they do not like.
+There will also be a list of meals that are gluten free and or vegetarian. These meals will be stored within the other meals but will only be displayed if they are specifically requested by the customer.
+Each meal will have a rating generator that will come from the rating from each customer and be averaged to create an overall rating.
+\end{mySubsection}
+\begin{mySubsection}{Users}
+[limited] This user can consume the service, but, not perform any administrative or doctoral actions. The user may browse the meal catalog, rate meals, favorite meals, view/print shopping lists, and view/print weekly meal schedule.
+[doctor] This user can consume the service like the limited user, but, can also prescribe a diet recommendation to a specific user.
+[admin] This user has no limitations accessible activities.
+\end{mySubsection}
+\begin{mySubsection}{Functional Requirements}
+There are four types of processes that are relevant:
+
+Limited User
+[Browse] This process allows customers to query the database to find certain meals. The customer may select a meal and add that meal to their daily meal plan.
+[Favorite] This process takes a meal out of the big list of meals and places it into the customers favorite list
+[Unfavorite] This process removes the meal from the customers favorite list.
+[Rate] This process will allow the users to rate the meals which will allow the administrators to keep track of meals that people are enjoying along with ones that are not doing very well.
+Dietitian User
+[Prescribe] This process allows the doctor to make a dietary recommendation.
+Admin User
+[admin] This process modifies the database information about customers and or meals.
+\end{mySubsection}
+\begin{mySubsection}{Business rules}
+Dietitians
+Only doctors may prescribe a dietary recommendation.
+Meals
+Meals will be  allowed in three categories: Regular, Gluten-free, Vegetarian. 
+Each customer will be allowed to customize their meal choices using those three options. 
+Decisions for each weeks meal plan will be made based upon the ratings collected from the customers
+Each meal will be set to a 2 serving default, which can be changed by the user.
+Customers
+Customers must create their own personal log in in order to use the like and dislike feature of the meals.
+Customers can never see more than a weeks worth of meals in order to limit their access to the meals
+Meals put on the customers dislike list will be banned from returning to that users weekly meal plan. If a meal in the administrative weekly plan conflicts with the users dislike list a replacement meal will be provided for the customer. 
+A user shall have a limit of no more than 3000 calories per day in meals.
+A user shall be given exactly 3 meals for a day.
+A user shall not be given meals that go against the limitations set by their dietitian.
+Ratings
+Ratings will be updated after each week, and will be a major determining factor in the administrators decisions about the meal schedule each week.
+Updates
+Users will be allowed to recommend new recipes to the administrators 
+\end{mySubsection}
+ 
+ 
+\begin{mySubsection}{Screens}
+ 
+1.     Main screen
+a.    Login
+b.    Create new user
+2.     Home Screen
+a.    List of meals for the week
+                                              i. 	Each meal will have thumbs up or thumbs down which are clickable
+b.    Settings button
+c.     Filter button
+                                              i. 	Price
+                                            ii. 	Meal type
+                                          iii. 	Meal ingredients(chicken, Steak… etc..)
+d.    Log out Button
+\end{mySubsection}
+\end{document}
