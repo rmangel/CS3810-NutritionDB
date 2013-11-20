@@ -13,7 +13,7 @@ while [ $# -gt 0 ]; do
     
     COMMAND="${COMMAND}s/UNKNOWN/VARCHAR(20)/g;"
     cat <(
-        grep "FOREIGN KEY" Tables.sql | \
+        grep -B 1 "FOREIGN KEY" "$FILE" | \
         sed "s/FOREIGN KEY.*$/;/g;s/ADD CONSTRAINT/DROP CONSTRAINT/g;"
     ) <(
         cat "$FILE" | sed "$COMMAND"
