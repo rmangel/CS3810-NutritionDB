@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="design" id="F4F7942E-E247-8DBC-E90A-127ABE4AF7DA" version="3.5">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-06 15:47:41 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>F4F7942E-E247-8DBC-E90A-127ABE4AF7DA</designId>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="design" id="F4F7942E-E247-8DBC-E90A-127ABE4AF7DA" version="3.41">
+   <createdBy>jgillham</createdBy>
+   <createdTime>2013-11-06 15:47:41 UTC</createdTime>
+   <ownerDesignName>design</ownerDesignName>
+   <capitalNames>false</capitalNames>
+   <designId>F4F7942E-E247-8DBC-E90A-127ABE4AF7DA</designId>
 </OSDM_Design>

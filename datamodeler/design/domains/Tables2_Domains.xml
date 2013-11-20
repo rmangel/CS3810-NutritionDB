@@ -5,6 +5,9 @@
          <createdBy>jgillham</createdBy>
          <createdTime>2013-11-14 17:00:56 UTC</createdTime>
          <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
          <avTSortOrder>0</avTSortOrder>
          <dataTypePrecision>0</dataTypePrecision>
          <dataTypeScale>0</dataTypeScale>
@@ -16,6 +19,9 @@
          <createdBy>jgillham</createdBy>
          <createdTime>2013-11-14 17:00:56 UTC</createdTime>
          <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
          <avTSortOrder>0</avTSortOrder>
          <fileName>Tables2_Domains</fileName>
          <logicalDatatype>LOGDT019</logicalDatatype>

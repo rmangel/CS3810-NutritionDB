@@ -1,91 +1,148 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ED6005A1-4D05-808E-348A-B86CDDBE54B6" name="Users">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>99BCA146-1E68-F285-38B7-78F16DB96400</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<allowColumnReorder>false</allowColumnReorder>
-<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
-<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="FNAME" id="BCC5B0F7-08FE-0618-28E9-A5F50350887D">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>DB644C72-CAD2-0F05-C8ED-89E7AAD89457</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>2</use>
-<distinctType>D930450F-3DDF-268B-E2EA-3BEAD5275BDA</distinctType>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="LNAME" id="82511A6E-593C-6B42-5937-1F0173289F3B">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>89654B0A-2209-E2B9-D7BC-31CBE1B09416</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>2</use>
-<distinctType>D930450F-3DDF-268B-E2EA-3BEAD5275BDA</distinctType>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="UNAME" id="A497299B-1815-0D18-94B7-3A620CB512FC">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>6731DF2C-A223-E3BC-2307-60A2C5E6DC11</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>2</use>
-<distinctType>D930450F-3DDF-268B-E2EA-3BEAD5275BDA</distinctType>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="GENDER" id="89B22A38-21F4-B804-CBF2-C7BBCABAEE2B">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>7841503E-CB2A-C314-267C-655FB969791B</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="PASSWORD" id="6ED2E1AB-D366-EE6F-C8B8-6FBA92EE25E9">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>1D981484-7313-2710-B325-EFFC9CE7C353</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>2</use>
-<distinctType>360FAF95-6453-E25D-DAD7-763D05E4858D</distinctType>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="Users_ID" id="8DAD3489-09B1-7067-A9B3-5E9A2A097B6E">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<autoIncrementColumn>true</autoIncrementColumn>
-<identityColumn>true</identityColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<isSurrogateColumn>true</isSurrogateColumn>
-</Column>
-</columns>
-<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="CBE35BEF-9BCE-CD18-EB01-78A491BEAF42" name="Users_PK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<pk>true</pk>
-<indexState>Primary Constraint</indexState>
-<indexColumnUsage>
-<colUsage columnID="8DAD3489-09B1-7067-A9B3-5E9A2A097B6E"/>
-</indexColumnUsage>
-</ind_PK_UK>
-</indexes>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" id="ED6005A1-4D05-808E-348A-B86CDDBE54B6" directorySegmentName="seg_0" name="Users">
+   <createdBy>jgillham</createdBy>
+   <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+   <generatorID>99BCA146-1E68-F285-38B7-78F16DB96400</generatorID>
+   <ownerDesignName>design</ownerDesignName>
+   <engineerTo>
+      <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+   </engineerTo>
+   <pkName>Users_PK</pkName>
+   <fonts>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Title</foType>
+         <fontStyle>1</fontStyle>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Column</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Datatype</foType>
+         <colorRGB>-16744448</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>PK Element</foType>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>FK Element</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>UK Element</foType>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Not Null</foType>
+         <colorRGB>-65536</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Key</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+   </fonts>
+   <columns>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="USERS_ID_PK" id="8DAD3489-09B1-7067-A9B3-5E9A2A097B6E">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>1</use>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+         <autoIncrementColumn>true</autoIncrementColumn>
+         <identityColumn>true</identityColumn>
+         <autoIncrementCycle>false</autoIncrementCycle>
+      </Column>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="FNAME" id="BCC5B0F7-08FE-0618-28E9-A5F50350887D">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <generatorID>DB644C72-CAD2-0F05-C8ED-89E7AAD89457</generatorID>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <nullsAllowed>true</nullsAllowed>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>2</use>
+         <distinctType>D930450F-3DDF-268B-E2EA-3BEAD5275BDA</distinctType>
+         <autoIncrementCycle>false</autoIncrementCycle>
+      </Column>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="LNAME" id="82511A6E-593C-6B42-5937-1F0173289F3B">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <generatorID>89654B0A-2209-E2B9-D7BC-31CBE1B09416</generatorID>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <nullsAllowed>true</nullsAllowed>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>2</use>
+         <distinctType>D930450F-3DDF-268B-E2EA-3BEAD5275BDA</distinctType>
+         <autoIncrementCycle>false</autoIncrementCycle>
+      </Column>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="UNAME" id="A497299B-1815-0D18-94B7-3A620CB512FC">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <generatorID>6731DF2C-A223-E3BC-2307-60A2C5E6DC11</generatorID>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <nullsAllowed>true</nullsAllowed>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>2</use>
+         <distinctType>D930450F-3DDF-268B-E2EA-3BEAD5275BDA</distinctType>
+         <autoIncrementCycle>false</autoIncrementCycle>
+      </Column>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="GENDER" id="89B22A38-21F4-B804-CBF2-C7BBCABAEE2B">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <generatorID>7841503E-CB2A-C314-267C-655FB969791B</generatorID>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <nullsAllowed>true</nullsAllowed>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>1</use>
+         <logicalDatatype>LOGDT025</logicalDatatype>
+         <dataTypeSize>1</dataTypeSize>
+         <autoIncrementCycle>false</autoIncrementCycle>
+      </Column>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="PASSWORD" id="6ED2E1AB-D366-EE6F-C8B8-6FBA92EE25E9">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <generatorID>1D981484-7313-2710-B325-EFFC9CE7C353</generatorID>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <nullsAllowed>true</nullsAllowed>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>2</use>
+         <distinctType>360FAF95-6453-E25D-DAD7-763D05E4858D</distinctType>
+         <autoIncrementCycle>false</autoIncrementCycle>
+      </Column>
+   </columns>
+   <indexes>
+      <ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="CBE35BEF-9BCE-CD18-EB01-78A491BEAF42" name="Users_PK">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <pk>true</pk>
+         <indexState>Primary Constraint</indexState>
+         <indexColumnUsage>
+            <colUsage columnID="8DAD3489-09B1-7067-A9B3-5E9A2A097B6E"/>
+         </indexColumnUsage>
+      </ind_PK_UK>
+   </indexes>
 </Table>

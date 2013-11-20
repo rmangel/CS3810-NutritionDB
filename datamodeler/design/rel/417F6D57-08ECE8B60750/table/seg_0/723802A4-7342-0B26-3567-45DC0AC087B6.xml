@@ -1,71 +1,120 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="723802A4-7342-0B26-3567-45DC0AC087B6" name="DayPlans">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>1918326F-431B-046E-AF51-67B6E46870C4</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<allowColumnReorder>false</allowColumnReorder>
-<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
-<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="DATE" id="B782EABE-BDB9-0BCB-7996-EBA78B0A77F9">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>171AB4E7-06E8-6510-ECCD-0626254615E4</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>2</use>
-<distinctType>CB7ACEDA-ACEF-FBB4-0829-DA46263824F1</distinctType>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="DayPlans_ID" id="A0C23720-D6CE-5704-55B0-F75D8C0CAF5A">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<autoIncrementColumn>true</autoIncrementColumn>
-<identityColumn>true</identityColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<isSurrogateColumn>true</isSurrogateColumn>
-</Column>
-<Column name="Users_Users_ID" id="EB24DA1C-505E-73E6-54C6-BA0DAE285117">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<delegate>8DAD3489-09B1-7067-A9B3-5E9A2A097B6E</delegate>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="F636D12B-CCE7-0960-46A4-E91AB44C42AD" referredColumn="8DAD3489-09B1-7067-A9B3-5E9A2A097B6E"/>
-</associations>
-</Column>
-</columns>
-<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="6428DE15-85DD-31F8-FF1A-91B1EDDC981A" name="DayPlans_PK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<pk>true</pk>
-<indexState>Primary Constraint</indexState>
-<indexColumnUsage>
-<colUsage columnID="A0C23720-D6CE-5704-55B0-F75D8C0CAF5A"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="FA136F38-542F-87ED-1479-F09282AE1504" name="DayPlans_Users_FK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>358D453D-2970-161C-0ABF-1CCA1EE8E1A3</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="EB24DA1C-505E-73E6-54C6-BA0DAE285117"/>
-</indexColumnUsage>
-</ind_PK_UK>
-</indexes>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" id="723802A4-7342-0B26-3567-45DC0AC087B6" directorySegmentName="seg_0" name="DayPlans">
+   <createdBy>jgillham</createdBy>
+   <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+   <generatorID>1918326F-431B-046E-AF51-67B6E46870C4</generatorID>
+   <ownerDesignName>design</ownerDesignName>
+   <engineerTo>
+      <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+   </engineerTo>
+   <pkName>DayPlans_PK</pkName>
+   <fonts>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Title</foType>
+         <fontStyle>1</fontStyle>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Column</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Datatype</foType>
+         <colorRGB>-16744448</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>PK Element</foType>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>FK Element</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>UK Element</foType>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Not Null</foType>
+         <colorRGB>-65536</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Key</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+   </fonts>
+   <columns>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="DATE" id="B782EABE-BDB9-0BCB-7996-EBA78B0A77F9">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <generatorID>171AB4E7-06E8-6510-ECCD-0626254615E4</generatorID>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <nullsAllowed>true</nullsAllowed>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>2</use>
+         <distinctType>CB7ACEDA-ACEF-FBB4-0829-DA46263824F1</distinctType>
+         <autoIncrementCycle>false</autoIncrementCycle>
+      </Column>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="DAYPLANS_ID_PK" id="A0C23720-D6CE-5704-55B0-F75D8C0CAF5A">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>1</use>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+         <autoIncrementColumn>true</autoIncrementColumn>
+         <identityColumn>true</identityColumn>
+         <autoIncrementCycle>false</autoIncrementCycle>
+      </Column>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="USERS_ID_FK" id="EB24DA1C-505E-73E6-54C6-BA0DAE285117">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>1</use>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+         <delegate>8DAD3489-09B1-7067-A9B3-5E9A2A097B6E</delegate>
+         <previousColumn>false</previousColumn>
+         <autoIncrementCycle>false</autoIncrementCycle>
+         <associations>
+            <colAssociation fkAssociation="F636D12B-CCE7-0960-46A4-E91AB44C42AD" referredColumn="8DAD3489-09B1-7067-A9B3-5E9A2A097B6E"/>
+         </associations>
+      </Column>
+   </columns>
+   <indexes>
+      <ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="6428DE15-85DD-31F8-FF1A-91B1EDDC981A" name="DayPlans_PK">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <pk>true</pk>
+         <indexState>Primary Constraint</indexState>
+         <indexColumnUsage>
+            <colUsage columnID="A0C23720-D6CE-5704-55B0-F75D8C0CAF5A"/>
+         </indexColumnUsage>
+      </ind_PK_UK>
+      <ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="FA136F38-542F-87ED-1479-F09282AE1504" name="DayPlans_Users_FK">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <generatorID>358D453D-2970-161C-0ABF-1CCA1EE8E1A3</generatorID>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <indexColumnUsage>
+            <colUsage columnID="EB24DA1C-505E-73E6-54C6-BA0DAE285117"/>
+         </indexColumnUsage>
+      </ind_PK_UK>
+   </indexes>
 </Table>

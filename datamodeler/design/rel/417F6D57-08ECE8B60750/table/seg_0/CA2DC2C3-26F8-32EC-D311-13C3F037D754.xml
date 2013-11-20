@@ -1,74 +1,121 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA2DC2C3-26F8-32EC-D311-13C3F037D754" name="MealsCourses">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<allowColumnReorder>false</allowColumnReorder>
-<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
-<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Meals_Meals_ID" id="6CFBF8EE-8EA5-BB55-603E-EFE75CC1E388">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<delegate>2573F52C-A887-E4FD-6D91-3808BACF2DFF</delegate>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="354FAC33-A98B-6428-ECD8-E947A5494595" referredColumn="2573F52C-A887-E4FD-6D91-3808BACF2DFF"/>
-</associations>
-</Column>
-<Column name="Course_Course_ID" id="A1E01CEE-418C-4789-1F42-1FF9C5112B8D">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<delegate>6DDAD819-341C-EA00-FF4B-95D131EBEE83</delegate>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="E80B8DFE-5C7A-6A03-07B0-36EEADD1D7C5" referredColumn="6DDAD819-341C-EA00-FF4B-95D131EBEE83"/>
-</associations>
-</Column>
-</columns>
-<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="501E7A65-92A1-E27E-11B8-C85EA987D437" name="MealsCourses__IDX">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<pk>true</pk>
-<indexState>Primary Constraint</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="6CFBF8EE-8EA5-BB55-603E-EFE75CC1E388"/>
-<colUsage columnID="A1E01CEE-418C-4789-1F42-1FF9C5112B8D"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="59B764C7-29F7-C034-50B0-2B7C6514E9F7" name="FK_ASS_10">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>5E99DAD0-9624-8339-E9CB-7E1D465D84F5</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="6CFBF8EE-8EA5-BB55-603E-EFE75CC1E388"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="2903D07F-2F30-14B3-3AC3-03D677875FCF" name="FK_ASS_11">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>5E99DAD0-9624-8339-E9CB-7E1D465D84F5</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="A1E01CEE-418C-4789-1F42-1FF9C5112B8D"/>
-</indexColumnUsage>
-</ind_PK_UK>
-</indexes>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" id="CA2DC2C3-26F8-32EC-D311-13C3F037D754" directorySegmentName="seg_0" name="MealsCourses">
+   <createdBy>jgillham</createdBy>
+   <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+   <ownerDesignName>design</ownerDesignName>
+   <engineerTo>
+      <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+   </engineerTo>
+   <pkName>MealsCourses__IDX</pkName>
+   <fonts>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Title</foType>
+         <fontStyle>1</fontStyle>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Column</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Datatype</foType>
+         <colorRGB>-16744448</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>PK Element</foType>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>FK Element</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>UK Element</foType>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Not Null</foType>
+         <colorRGB>-65536</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Key</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+   </fonts>
+   <columns>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="MEALS_ID_FK" id="6CFBF8EE-8EA5-BB55-603E-EFE75CC1E388">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>1</use>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+         <delegate>2573F52C-A887-E4FD-6D91-3808BACF2DFF</delegate>
+         <previousColumn>false</previousColumn>
+         <autoIncrementCycle>false</autoIncrementCycle>
+         <associations>
+            <colAssociation fkAssociation="354FAC33-A98B-6428-ECD8-E947A5494595" referredColumn="2573F52C-A887-E4FD-6D91-3808BACF2DFF"/>
+         </associations>
+      </Column>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="COURSE_ID_FK" id="A1E01CEE-418C-4789-1F42-1FF9C5112B8D">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>1</use>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+         <delegate>6DDAD819-341C-EA00-FF4B-95D131EBEE83</delegate>
+         <previousColumn>false</previousColumn>
+         <autoIncrementCycle>false</autoIncrementCycle>
+         <associations>
+            <colAssociation fkAssociation="E80B8DFE-5C7A-6A03-07B0-36EEADD1D7C5" referredColumn="6DDAD819-341C-EA00-FF4B-95D131EBEE83"/>
+         </associations>
+      </Column>
+   </columns>
+   <indexes>
+      <ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="501E7A65-92A1-E27E-11B8-C85EA987D437" name="MealsCourses__IDX">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <pk>true</pk>
+         <indexState>Primary Constraint</indexState>
+         <indexColumnUsage>
+            <colUsage columnID="6CFBF8EE-8EA5-BB55-603E-EFE75CC1E388"/>
+            <colUsage columnID="A1E01CEE-418C-4789-1F42-1FF9C5112B8D"/>
+         </indexColumnUsage>
+      </ind_PK_UK>
+      <ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="59B764C7-29F7-C034-50B0-2B7C6514E9F7" name="FK_ASS_10">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <generatorID>5E99DAD0-9624-8339-E9CB-7E1D465D84F5</generatorID>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <indexColumnUsage>
+            <colUsage columnID="6CFBF8EE-8EA5-BB55-603E-EFE75CC1E388"/>
+         </indexColumnUsage>
+      </ind_PK_UK>
+      <ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="2903D07F-2F30-14B3-3AC3-03D677875FCF" name="FK_ASS_11">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <generatorID>5E99DAD0-9624-8339-E9CB-7E1D465D84F5</generatorID>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <indexColumnUsage>
+            <colUsage columnID="A1E01CEE-418C-4789-1F42-1FF9C5112B8D"/>
+         </indexColumnUsage>
+      </ind_PK_UK>
+   </indexes>
 </Table>

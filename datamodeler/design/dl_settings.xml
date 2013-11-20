@@ -4,7 +4,6 @@
 	<automatic_pk_generation value="false" />
 	<automatic_uk_generation value="false" />
 	<automatic_fk_generation value="false" />
-	<preserve_ddl_generation_options value="false" />
 	<substitution_patterns>
 	</substitution_patterns>
 	<classification_types>
@@ -129,13 +128,6 @@
 			<font_object fo_type="Text" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0"/>
 		</fonts>
 		</fc_object>
-		<fc_object classname="Relationship Attributes" background="-26266" foreground="-16777216">
-		<fonts>
-			<font_object fo_type="Attribute" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0"/>
-			<font_object fo_type="Datatype" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0"/>
-			<font_object fo_type="Not Null" font_color="-65536" font_name="Dialog" font_size="10" font_style="0"/>
-		</fonts>
-		</fc_object>
 		<fc_object classname="Legend" background="-1" foreground="-16777216">
 		<fonts>
 			<font_object fo_type="Text" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0"/>
@@ -192,15 +184,12 @@
 			<column_foreign_key value="{ref table}_{ref column}"/>
 			<ui value="{entity} PK"/>
 			<relation_attribute value="{ref entity}_{ref attribute}"/>
-			<surrogate_key value="{table abbr}_PK"/>
-			<surrogate_key_col value="{table abbr}_ID"/>
-			<discriminator_col value="{table abbr}_TYPE"/>
 		</constraints>
 		<glossaries>
 		</glossaries>
 	</naming_standard_rules>
-	<comparemapping>
-	</comparemapping>
+<comparemapping>
+</comparemapping>
 	<engineering_params>
 		<delete_without_origin value="false"/>
 		<engineer_coordinates value="true"/>
@@ -220,7 +209,7 @@
 			<property name="Comment" selected="true"/>
 			<property name="Comment in RDBMS" selected="true"/>
 			<property name="Notes" selected="true"/>
-			<property name="Temporary Table Scope" selected="true"/>
+			<property name="TempTable Scope" selected="true"/>
 			<property name="Table Type" selected="true"/>
 			<property name="Structured Type" selected="true"/>
 			<property name="Type Substitution (Super-Type Object)" selected="true"/>
@@ -240,9 +229,6 @@
 			<property name="Default Value" selected="true"/>
 			<property name="Check Constraint Name" selected="true"/>
 			<property name="Use Domain Constraint" selected="true"/>
-			<property name="Check Constraint" selected="true"/>
-			<property name="Range Constraint" selected="true"/>
-			<property name="LOV Constraint" selected="true"/>
 			<property name="Comment" selected="true"/>
 			<property name="Comment in RDBMS" selected="true"/>
 			<property name="Notes" selected="true"/>
@@ -261,7 +247,6 @@
 		</key_index>
 		<relation_fk>
 			<property name="Name" selected="true"/>
-			<property name="Delete Rule" selected="true"/>
 			<property name="Comment" selected="true"/>
 			<property name="Comment in RDBMS" selected="true"/>
 			<property name="Notes" selected="true"/>
@@ -272,22 +257,19 @@
 			<property name="Comment in RDBMS" selected="true"/>
 			<property name="Notes" selected="true"/>
 			<property name="Structured Type" selected="true"/>
-			<property name="WHERE" selected="true"/>
-			<property name="HAVING" selected="true"/>
+			<property name="Where" selected="true"/>
+			<property name="Having" selected="true"/>
 			<property name="User Defined SQL" selected="true"/>
 		</entityview_view>
 	</eng_compare>
-	<model_compare_props_filter>
-	</model_compare_props_filter>
-	<model_compare_storage_props_filter>
-	</model_compare_storage_props_filter>
 	<naming_options>
 		<model_options objectid="417F6D57-4868-DF77-327C-08ECE8B60750">
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Table" max_name_length="30" case_type="2" valid_characters="null" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Column" max_name_length="30" case_type="2" valid_characters="null" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.TableView" max_name_length="30" case_type="2" valid_characters="null" all_valid="true" />
-			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Index" max_name_length="30" case_type="2" valid_characters="null" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" max_name_length="30" case_type="2" valid_characters="null" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Index" max_name_length="30" case_type="2" valid_characters="null" all_valid="true" />
 		</model_options>
 		<model_options objectid="7FCD20F3-B57F-1102-BF7F-4FBB294623B1">
 			<naming_option class_name="oracle.dbtools.crest.model.design.logical.Entity" max_name_length="254" case_type="2" valid_characters="" all_valid="true" />

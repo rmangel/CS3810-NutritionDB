@@ -1,69 +1,117 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="22DA4AA8-2800-093F-1205-F92F7F56AFDE" name="Dietition">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<generatorID>59338EA7-C15B-9157-165A-9F42DEC70C67</generatorID>
-<ownerDesignName>design</ownerDesignName>
-<allowColumnReorder>false</allowColumnReorder>
-<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
-<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="User_ID_FK" id="90399AC5-4822-2B4A-669E-48565C6E47A8">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 20:03:49 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<delegate>8DAD3489-09B1-7067-A9B3-5E9A2A097B6E</delegate>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="E62F6EA7-C1FE-6C0D-CF0B-4F513E3CFB5B" referredColumn="8DAD3489-09B1-7067-A9B3-5E9A2A097B6E"/>
-</associations>
-</Column>
-<Column name="Prescription_ID_FK" id="96F8EFC8-DC60-03C5-6FEB-9D1692526331">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 20:05:10 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<delegate>C3A1992E-01EA-9B79-668D-37CAA4109B42</delegate>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="C8331635-AECB-472F-346E-0074BD9745FA" referredColumn="C3A1992E-01EA-9B79-668D-37CAA4109B42"/>
-</associations>
-</Column>
-</columns>
-<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="04BD58E0-F02A-D185-C2AE-6B5C9E6DB6F8" name="Dietition_PK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 19:37:04 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<pk>true</pk>
-<indexState>Primary Constraint</indexState>
-<indexColumnUsage>
-<colUsage columnID="90399AC5-4822-2B4A-669E-48565C6E47A8"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="3FD9D96E-F937-3865-06C5-09DCEB289802" name="Dietition_Users_FK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 20:03:49 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="90399AC5-4822-2B4A-669E-48565C6E47A8"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="D18A3C2A-B61F-C04F-8ADC-868214D3BF90" name="Dietition_Prescription_FK">
-<createdBy>jgillham</createdBy>
-<createdTime>2013-11-14 20:05:10 UTC</createdTime>
-<ownerDesignName>design</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="96F8EFC8-DC60-03C5-6FEB-9D1692526331"/>
-</indexColumnUsage>
-</ind_PK_UK>
-</indexes>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" id="22DA4AA8-2800-093F-1205-F92F7F56AFDE" directorySegmentName="seg_0" name="Dietition">
+   <createdBy>jgillham</createdBy>
+   <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+   <generatorID>59338EA7-C15B-9157-165A-9F42DEC70C67</generatorID>
+   <ownerDesignName>design</ownerDesignName>
+   <engineerTo>
+      <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+   </engineerTo>
+   <pkName>Dietition_PK</pkName>
+   <fonts>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Title</foType>
+         <fontStyle>1</fontStyle>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Column</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Datatype</foType>
+         <colorRGB>-16744448</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>PK Element</foType>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>FK Element</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>UK Element</foType>
+         <colorRGB>-16776961</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Not Null</foType>
+         <colorRGB>-65536</colorRGB>
+      </FontObject>
+      <FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+         <foType>Key</foType>
+         <colorRGB>-16777216</colorRGB>
+      </FontObject>
+   </fonts>
+   <columns>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="USER_ID_FK" id="90399AC5-4822-2B4A-669E-48565C6E47A8">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 20:03:49 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>1</use>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+         <delegate>8DAD3489-09B1-7067-A9B3-5E9A2A097B6E</delegate>
+         <autoIncrementCycle>false</autoIncrementCycle>
+         <associations>
+            <colAssociation fkAssociation="E62F6EA7-C1FE-6C0D-CF0B-4F513E3CFB5B" referredColumn="8DAD3489-09B1-7067-A9B3-5E9A2A097B6E"/>
+         </associations>
+      </Column>
+      <Column class="oracle.dbtools.crest.model.design.relational.Column" name="PRESCRIPTION_ID_FK" id="96F8EFC8-DC60-03C5-6FEB-9D1692526331">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 20:05:10 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <useDomainConstraints>false</useDomainConstraints>
+         <use>1</use>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+         <delegate>C3A1992E-01EA-9B79-668D-37CAA4109B42</delegate>
+         <autoIncrementCycle>false</autoIncrementCycle>
+         <associations>
+            <colAssociation fkAssociation="C8331635-AECB-472F-346E-0074BD9745FA" referredColumn="C3A1992E-01EA-9B79-668D-37CAA4109B42"/>
+         </associations>
+      </Column>
+   </columns>
+   <indexes>
+      <ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="04BD58E0-F02A-D185-C2AE-6B5C9E6DB6F8" name="Dietition_PK">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 19:37:04 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <pk>true</pk>
+         <indexState>Primary Constraint</indexState>
+         <indexColumnUsage>
+            <colUsage columnID="90399AC5-4822-2B4A-669E-48565C6E47A8"/>
+         </indexColumnUsage>
+      </ind_PK_UK>
+      <ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="3FD9D96E-F937-3865-06C5-09DCEB289802" name="Dietition_Users_FK">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 20:03:49 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <indexColumnUsage>
+            <colUsage columnID="90399AC5-4822-2B4A-669E-48565C6E47A8"/>
+         </indexColumnUsage>
+      </ind_PK_UK>
+      <ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="D18A3C2A-B61F-C04F-8ADC-868214D3BF90" name="Dietition_Prescription_FK">
+         <createdBy>jgillham</createdBy>
+         <createdTime>2013-11-14 20:05:10 UTC</createdTime>
+         <ownerDesignName>design</ownerDesignName>
+         <engineerTo>
+            <item key="417F6D57-4868-DF77-327C-08ECE8B60750" value="true"/>
+         </engineerTo>
+         <indexColumnUsage>
+            <colUsage columnID="96F8EFC8-DC60-03C5-6FEB-9D1692526331"/>
+         </indexColumnUsage>
+      </ind_PK_UK>
+   </indexes>
 </Table>
