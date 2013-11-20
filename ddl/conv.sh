@@ -16,6 +16,6 @@ while [ $# -gt 0 ]; do
         grep "FOREIGN KEY" Tables.sql | \
         sed "s/FOREIGN KEY.*$/;/g;s/ADD CONSTRAINT/DROP CONSTRAINT/g;"
     ) <(
-        cat Tables.sql | sed "$COMMAND"
+        cat "$FILE" | sed "$COMMAND"
     )
 done
