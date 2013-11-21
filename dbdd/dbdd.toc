@@ -1,14 +1,22 @@
-\contentsline {section}{\numberline {1}test}{3}
-\contentsline {section}{\numberline {2}Description}{3}
-\contentsline {section}{\numberline {3}Assumptions}{3}
-\contentsline {section}{\numberline {4}Risks}{3}
-\contentsline {section}{\numberline {5}Influencing Factors}{3}
-\contentsline {section}{\numberline {6}Tools}{3}
-\contentsline {section}{\numberline {7}CONOPS}{3}
-\contentsline {section}{\numberline {8}Primary Project Requirements}{4}
-\contentsline {section}{\numberline {9}Data Requirements}{5}
-\contentsline {section}{\numberline {10}Users}{5}
-\contentsline {section}{\numberline {11}Functional Requirements}{5}
-\contentsline {section}{\numberline {12}Business rules}{5}
-\contentsline {section}{\numberline {13}Screens}{6}
-\contentsline {section}{\numberline {14}What we learned}{6}
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Description}{3}
+\contentsline {section}{\numberline {2}Assumptions/Risks/Constraints}{3}
+\contentsline {subsection}{\numberline {2.1}Assumptions}{3}
+\contentsline {subsection}{\numberline {2.2}Risks}{3}
+\contentsline {section}{\numberline {3}Design Decisions}{3}
+\contentsline {subsection}{\numberline {3.1}Influencing Factors}{3}
+\contentsline {subsection}{\numberline {3.2}Tools}{3}
+\contentsline {subsection}{\numberline {3.3}CONOPS}{3}
+\contentsline {subsection}{\numberline {3.4}Primary Project Requirements}{4}
+\contentsline {subsection}{\numberline {3.5}Data Requirements}{5}
+\contentsline {subsection}{\numberline {3.6}Users}{5}
+\contentsline {subsection}{\numberline {3.7}Functional Requirements}{5}
+\contentsline {subsection}{\numberline {3.8}Business rules}{5}
+\contentsline {subsection}{\numberline {3.9}Screens}{6}
+\contentsline {subsection}{\numberline {3.10}What we learned}{6}
+\contentsline {section}{\numberline {4}Detailed Data Base Design}{6}
+\contentsline {subsection}{\numberline {4.1}Relations DDL}{6}
+\contentsline {section}{\numberline {5}Design Process}{9}
+\contentsline {subsection}{\numberline {5.1}Automated Processing of Data Modeler DDL Output}{9}
+\contentsline {section}{\numberline {6}Testing}{10}
+\contentsline {subsection}{\numberline {6.1}Inserting Test Data DDL}{10}
