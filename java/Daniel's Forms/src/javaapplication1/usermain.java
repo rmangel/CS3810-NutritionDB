@@ -13,7 +13,12 @@ public class usermain extends javax.swing.JFrame {
     /**
      * Creates new form usermain
      */
-    public usermain() {
+    public usermain( String fn, String ln) {
+        initComponents();
+        displayName.setText("Hello " + fn + " " + ln +".");
+    }
+    
+    public usermain(){
         initComponents();
     }
 
@@ -26,16 +31,21 @@ public class usermain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        displayName = new javax.swing.JLabel();
+        weeklyPlan = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("*First and last name here*");
+        displayName.setText("*First and last name here*");
 
-        jButton1.setText("View Weekly Plan");
+        weeklyPlan.setText("View Weekly Plan");
+        weeklyPlan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                weeklyPlanActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("View Dietary Restrictions");
 
@@ -50,17 +60,17 @@ public class usermain extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3)
                     .addComponent(jButton2)
-                    .addComponent(jButton1)
-                    .addComponent(jLabel1))
+                    .addComponent(weeklyPlan)
+                    .addComponent(displayName))
                 .addGap(38, 38, 38))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(displayName)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(weeklyPlan)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
                 .addGap(18, 18, 18)
@@ -70,6 +80,10 @@ public class usermain extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void weeklyPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weeklyPlanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_weeklyPlanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -106,9 +120,9 @@ public class usermain extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel displayName;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton weeklyPlan;
     // End of variables declaration//GEN-END:variables
 }
