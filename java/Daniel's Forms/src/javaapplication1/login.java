@@ -200,6 +200,15 @@ public class login extends javax.swing.JFrame {
                 }
                 stmt.close();
                 conn.close();
+                
+                Connection conn2 = DriverManager.getConnection(DB_URL);
+                System.out.println("connecting to the db");
+                Statement stmt2 = conn.createStatement();
+                String sqlStatement2 = "SELECT USER_ID FROM Dietition JOIN Users ON Dietition.USER_ID = Users.USER_ID WHERE Users.Uname = '" + userN + "'";
+                System.out.println(sqlStatement2);
+                ResultSet result2 = stmt2.executeQuery(sqlStatement2);
+                stmt2.close();
+                conn2.close();
 
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Enter username and password.", "Login error",
