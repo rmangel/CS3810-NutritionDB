@@ -6,156 +6,162 @@
 
 
 DROP TABLE Attributes;
-CREATE TABLE Attributes 
-    ( 
-     ATTRIBUTES_ID_PK NUMERIC  NOT NULL , 
-     NAME VARCHAR (50) 
-    ) 
+CREATE TABLE Attributes
+    (
+     ATTRIBUTES_ID_PK NUMERIC  NOT NULL ,
+     NAME VARCHAR (50)
+    )
 ;
 
 
 
 DROP TABLE Course;
-CREATE TABLE Course 
-    ( 
-     COURSE_ID_PK NUMERIC  NOT NULL , 
-     NAME VARCHAR (50) , 
+CREATE TABLE Course
+    (
+     COURSE_ID NUMERIC  NOT NULL ,
+     NAME VARCHAR (50) ,
      SERVINGS INTEGER
-    ) 
+    )
 ;
 
 
 
 DROP TABLE DayPlans;
-CREATE TABLE DayPlans 
-    ( 
+CREATE TABLE DayPlans
+    (
      "DATE" DATE ,
-     USERS_ID NUMERIC  NOT NULL 
-    ) 
+     USERS_ID NUMERIC  NOT NULL
+    )
 ;
 
 
 
 DROP TABLE Dietition;
-CREATE TABLE Dietition 
-    ( 
+CREATE TABLE Dietition
+    (
      USER_ID NUMERIC  NOT NULL , 
-     PRESCRIPTION_ID NUMERIC  NOT NULL 
-    ) 
+     PRESCRIPTION_ID NUMERIC  NOT NULL
+    )
 ;
 
 
 DROP TABLE Emails;
-CREATE TABLE Emails 
-    ( 
-     ADDRESS VARCHAR (1000) , 
-     USERS_ID NUMERIC  NOT NULL 
-    ) 
+CREATE TABLE Emails
+    (
+     ADDRESS VARCHAR (1000) ,
+     USERS_ID NUMERIC  NOT NULL
+    )
 ;
 
 
 
 
 DROP TABLE Ingredients;
-CREATE TABLE Ingredients 
+CREATE TABLE Ingredients
     (
-     INGREDIENTS_ID_PK NUMERIC  NOT NULL , 
-     NAME VARCHAR (50) , 
-     FAT INTEGER , 
+     INGREDIENTS_ID_PK NUMERIC  NOT NULL ,
+     NAME VARCHAR (50) ,
+     FAT INTEGER ,
      CALORIES INTEGER,
-     COURSE_ID NUMERIC 
-    ) 
+     COURSE_ID NUMERIC
+    )
 ;
 
 
 
 DROP TABLE Meals;
-CREATE TABLE Meals 
-    ( 
-     MEALS_ID_PK NUMERIC  NOT NULL , 
-     NAME VARCHAR (50) , 
-     DAYPLANS_ID NUMERIC 
-    ) 
+CREATE TABLE Meals
+    (
+     MEALS_ID_PK NUMERIC  NOT NULL ,
+     NAME VARCHAR (50) ,
+     DAYPLANS_ID NUMERIC
+    )
 ;
 
 
 
 
 DROP TABLE MealsCourses;
-CREATE TABLE MealsCourses 
-    ( 
-     MEALS_ID NUMERIC  NOT NULL , 
-     COURSE_ID NUMERIC  NOT NULL 
-    ) 
+CREATE TABLE MealsCourses
+    (
+     MEALS_ID NUMERIC  NOT NULL ,
+     COURSE_ID NUMERIC  NOT NULL
+    )
 ;
 
 
 
 
 DROP TABLE MealsFoodAttributes;
-CREATE TABLE MealsFoodAttributes 
-    ( 
-     MEALS_ID NUMERIC  NOT NULL , 
-     ATTRIBUTES_ID NUMERIC  NOT NULL 
-    ) 
+CREATE TABLE MealsFoodAttributes
+    (
+     MEALS_ID NUMERIC  NOT NULL ,
+     ATTRIBUTES_ID NUMERIC  NOT NULL
+    )
 ;
 
 
 
 
 DROP TABLE Prescription;
-CREATE TABLE Prescription 
-    ( 
-     PRESCIPTION_ID_PK NUMERIC  NOT NULL , 
-     "DATE" DATE , 
-     USER_ID NUMERIC  NOT NULL 
-    ) 
+CREATE TABLE Prescription
+    (
+     PRESCIPTION_ID_PK NUMERIC  NOT NULL ,
+     "DATE" DATE ,
+     USER_ID NUMERIC  NOT NULL
+    )
 ;
 
 
 
 
 DROP TABLE PrescriptionAttributes;
-CREATE TABLE PrescriptionAttributes 
-    ( 
-     PRESCRIPTION_ID NUMERIC  NOT NULL , 
-     ATTRIBUTES_ID NUMERIC  NOT NULL 
-    ) 
+CREATE TABLE PrescriptionAttributes
+    (
+     PRESCRIPTION_ID NUMERIC  NOT NULL ,
+     ATTRIBUTES_ID NUMERIC  NOT NULL
+    )
 ;
 
 
 
 
 DROP TABLE Ratings;
-CREATE TABLE Ratings 
-    ( 
-     MEALS_ID NUMERIC  NOT NULL , 
-     USERS_ID NUMERIC  NOT NULL , 
-     STARS INTEGER 
-    ) 
+CREATE TABLE Ratings
+    (
+     MEALS_ID NUMERIC  NOT NULL ,
+     USERS_ID NUMERIC  NOT NULL ,
+     STARS INTEGER
+    )
 ;
 
 
 
 DROP TABLE UserType;
-CREATE TABLE UserType 
+CREATE TABLE UserType
     (
-     USER_TYPE_ID_PK NUMERIC  NOT NULL 
+     USER_TYPE_ID_PK NUMERIC  NOT NULL
      ,
      NAME VARCHAR (50)  NOT NULL
-    ) 
+    )
 ;
 
 
 DROP TABLE Users;
-CREATE TABLE Users 
-    ( 
-     USERS_ID_PK NUMERIC  NOT NULL , 
-     FNAME VARCHAR (50) , 
-     LNAME VARCHAR (50) , 
-     UNAME VARCHAR (50) , 
-     GENDER CHAR (1) , 
+CREATE TABLE Users
+    (
+     USER_ID NUMERIC  NOT NULL ,
+     FNAME VARCHAR (50) ,
+     LNAME VARCHAR (50) ,
+     UNAME VARCHAR (50) ,
+     GENDER CHAR (1) ,
      PASSWORD VARCHAR (200),
-     USER_TYPE_ID NUMERIC  NOT NULL 
-    ) 
+     USER_TYPE_ID NUMERIC  NOT NULL
+     ,
+     CONSTRAINT User_PK PRIMARY KEY ( USER_ID )
+    )
 ;
+
+ALTER TABLE DayPlans
+     ADD CONSTRAINT DayPlans_Users_FK FOREIGN KEY ( USERS_ID )
+     REFERENCES Users( USER_ID );
