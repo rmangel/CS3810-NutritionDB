@@ -19,6 +19,15 @@ public class JavaApplication1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        try{
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
+        }
+        // If an exception is generated then try removing the driver,
+        //  closing the project, re-opening the project, and finally
+        //  re-adding the driver.
+        catch (Exception e) {
+            e.printStackTrace();
+        }
         JavaApplication1 app = new JavaApplication1();
         login form = new login();
         form.setVisible(true);
