@@ -192,28 +192,31 @@ public class login extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(rootPane, "Login Successful");
                     setUName(result.getString("Uname"));
                     login = true;
-                    usermain umain = new usermain(fname, lname);
-                    umain.setVisible(login);
+                    Connection conn2 = DriverManager.getConnection(DB_URL);
+                    System.out.println("connecting to the db");
+                    Statement stmt2 = conn2.createStatement();
+                    String sqlStatement2 = "SELECT DIETITION.USER_ID" +
+                            " FROM DIETITION NATURAL JOIN USERS WHERE " +
+                            "Users.Uname = '" + userN + "'";
+                    System.out.println(sqlStatement2);
+                    ResultSet result2 = stmt2.executeQuery(sqlStatement2);
+                    boolean canPrescribe = result2.next();
+                    System.out.println( "canPrescribe" + canPrescribe );
+                    stmt2.close();
+                    conn2.close();
+                    if ( canPrescribe ) {
+                        dietitianhome dhome = new dietitianhome(fname, lname);
+                    }
+                    else {
+                        usermain umain = new usermain(fname, lname);
+                        umain.setVisible(login);
+                    }
                 } else {
                     JOptionPane.showMessageDialog(rootPane, "Username and/or password incorrect.", "Login error",
                             JOptionPane.ERROR_MESSAGE);
                 }
                 stmt.close();
                 conn.close();
-                
-                Connection conn2 = DriverManager.getConnection(DB_URL);
-                System.out.println("connecting to the db");
-                Statement stmt2 = conn2.createStatement();
-                String sqlStatement2 = "SELECT DIETITION.USER_ID" +
-                        " FROM DIETITION NATURAL JOIN USERS WHERE " +
-                        "Users.Uname = '" + userN + "'";
-                System.out.println(sqlStatement2);
-                ResultSet result2 = stmt2.executeQuery(sqlStatement2);
-                boolean exists = result2.next();
-                System.out.println( "exists" + exists );
-                stmt2.close();
-                conn2.close();
-
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Enter username and password.", "Login error",
                         JOptionPane.ERROR_MESSAGE);
