@@ -2,6 +2,7 @@ INSERT INTO usertype VALUES ( 1,'Vegetarian' );
 INSERT INTO usertype VALUES ( 2,'Vegan' );
 INSERT INTO users VALUES ( 1, 'Fluffy', 'Buttons', 'fbutton', 'f', 'abc123',1 );
 INSERT INTO users VALUES ( 2, 'Edward', 'Jones', 'ejones', 'm', 'hello',2 );
+INSERT INTO dietition VALUES ( 2, 1 );
 
 INSERT INTO attributes VALUES ( 1, 'Low Sodium' );
 INSERT INTO attributes VALUES ( 2, 'Low Fat' );
