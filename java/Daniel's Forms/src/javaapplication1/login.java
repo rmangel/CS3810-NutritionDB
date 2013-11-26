@@ -206,6 +206,7 @@ public class login extends javax.swing.JFrame {
                     conn2.close();
                     if ( canPrescribe ) {
                         dietitianhome dhome = new dietitianhome(fname, lname);
+                        dhome.setVisible(login);
                     }
                     else {
                         usermain umain = new usermain(fname, lname);
