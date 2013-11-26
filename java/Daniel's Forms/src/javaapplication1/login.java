@@ -44,9 +44,9 @@ public class login extends javax.swing.JFrame {
         userName = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         password = new javax.swing.JTextField();
-        signIn = new javax.swing.JButton();
-        register = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        BtnSignIn = new javax.swing.JButton();
+        BtnRegister = new javax.swing.JButton();
+        BtnListUsers = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -95,24 +95,24 @@ public class login extends javax.swing.JFrame {
 
         jLabel3.setText("Password");
 
-        signIn.setText("Sign in");
-        signIn.addActionListener(new java.awt.event.ActionListener() {
+        BtnSignIn.setText("Sign in");
+        BtnSignIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                signInActionPerformed(evt);
+                BtnSignInActionPerformed(evt);
             }
         });
 
-        register.setText("Register");
-        register.addActionListener(new java.awt.event.ActionListener() {
+        BtnRegister.setText("Register");
+        BtnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registerActionPerformed(evt);
+                BtnRegisterActionPerformed(evt);
             }
         });
 
-        jButton1.setText("List Of Users");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnListUsers.setText("List Of Users");
+        BtnListUsers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnListUsersActionPerformed(evt);
             }
         });
 
@@ -136,14 +136,14 @@ public class login extends javax.swing.JFrame {
                             .addComponent(password, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(signIn))
+                        .addComponent(BtnSignIn))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(register)))
+                        .addComponent(BtnRegister)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(BtnListUsers)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -159,18 +159,18 @@ public class login extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
-                .addComponent(signIn)
+                .addComponent(BtnSignIn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(register)
+                .addComponent(BtnRegister)
                 .addGap(84, 84, 84)
-                .addComponent(jButton1)
+                .addComponent(BtnListUsers)
                 .addContainerGap(120, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void signInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signInActionPerformed
+    private void BtnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSignInActionPerformed
         try {
             String userN = userName.getText();
             String pass = password.getText();
@@ -203,10 +203,14 @@ public class login extends javax.swing.JFrame {
                 
                 Connection conn2 = DriverManager.getConnection(DB_URL);
                 System.out.println("connecting to the db");
-                Statement stmt2 = conn.createStatement();
-                String sqlStatement2 = "SELECT USER_ID FROM Dietition JOIN Users ON Dietition.USER_ID = Users.USER_ID WHERE Users.Uname = '" + userN + "'";
+                Statement stmt2 = conn2.createStatement();
+                String sqlStatement2 = "SELECT DIETITION.USER_ID" +
+                        " FROM DIETITION NATURAL JOIN USERS WHERE " +
+                        "Users.Uname = '" + userN + "'";
                 System.out.println(sqlStatement2);
                 ResultSet result2 = stmt2.executeQuery(sqlStatement2);
+                boolean exists = result2.next();
+                System.out.println( "exists" + exists );
                 stmt2.close();
                 conn2.close();
 
@@ -215,23 +219,24 @@ public class login extends javax.swing.JFrame {
                         JOptionPane.ERROR_MESSAGE);
             }
         } catch (Exception ex) {
+            ex.printStackTrace();
             JOptionPane.showMessageDialog(rootPane, "There was an error login in." + ex.getMessage(), "Login error",
                     JOptionPane.ERROR_MESSAGE);
         }
 
 
-    }//GEN-LAST:event_signInActionPerformed
+    }//GEN-LAST:event_BtnSignInActionPerformed
 
-    private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
+    private void BtnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegisterActionPerformed
         registration form = new registration(DB_URL);
         form.setVisible(true);
-    }//GEN-LAST:event_registerActionPerformed
+    }//GEN-LAST:event_BtnRegisterActionPerformed
 
     private void userNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_userNameActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BtnListUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnListUsersActionPerformed
         int count;
 
         try {
@@ -256,7 +261,7 @@ public class login extends javax.swing.JFrame {
         } catch (Exception ex) {
             System.out.println("ERROR: " + ex.getMessage());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnListUsersActionPerformed
 
     public String returnUName() {
         return uName;
@@ -305,7 +310,9 @@ public class login extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BtnListUsers;
+    private javax.swing.JButton BtnRegister;
+    private javax.swing.JButton BtnSignIn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -313,8 +320,6 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField password;
-    private javax.swing.JButton register;
-    private javax.swing.JButton signIn;
     private javax.swing.JTextField userName;
     // End of variables declaration//GEN-END:variables
 }
