@@ -4,19 +4,16 @@
  */
 package view;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import control.Application;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import javax.swing.JOptionPane;
+import model.DataBaseManager;
 
 /**
  *
  * @author ArcadeHitman
  */
 public class registration extends javax.swing.JFrame {
-
-    private String DB_URL;
 
     /**
      * Creates new form registration
@@ -27,7 +24,6 @@ public class registration extends javax.swing.JFrame {
 
     public registration(String url) {
         initComponents();
-        DB_URL = url;
     }
 
     /**
@@ -193,10 +189,9 @@ public class registration extends javax.swing.JFrame {
         try {
             if (!firstName.isEmpty() && !lastName.isEmpty() && !userName.isEmpty()
                     && !gender.isEmpty() && !passkey.isEmpty() && !em.isEmpty()) {
-                Connection conn = DriverManager.getConnection(DB_URL);
-                Statement stmt = conn.createStatement();
+                DataBaseManager db = Application.getApplication().getConnection();
                 String sqlGetCount = "select count(*) from app.users";
-                ResultSet countResult = stmt.executeQuery(sqlGetCount);
+                ResultSet countResult = db.runStatement(sqlGetCount);
                 countResult.next();
                 userCount = countResult.getInt(1);
                 userCount = userCount + 1;
@@ -205,14 +200,12 @@ public class registration extends javax.swing.JFrame {
                         + userName + "', '" + gender + "', '"
                         + passkey + "', " + 1 + ")";
                 System.out.println(sqlAddUser);
-                stmt.executeUpdate(sqlAddUser);
+                db.runStatement(sqlAddUser);
                 String sqlAddEmail = "INSERT INTO Emails Values ('" + em + "', " + userCount
                         + ")";
                 System.out.println(sqlAddEmail);
-                stmt.executeUpdate(sqlAddEmail);
+                db.runStatement(sqlAddEmail);
                 System.out.println("You been added to the table.");
-                stmt.close();
-                conn.close();
                 this.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Fill in all the fields.", "Login error",
