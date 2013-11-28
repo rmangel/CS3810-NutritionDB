@@ -200,11 +200,11 @@ public class registration extends javax.swing.JFrame {
                         + userName + "', '" + gender + "', '"
                         + passkey + "', " + 1 + ")";
                 System.out.println(sqlAddUser);
-                db.runStatement(sqlAddUser);
+                db.runUpdateStatement(sqlAddUser);
                 String sqlAddEmail = "INSERT INTO Emails Values ('" + em + "', " + userCount
                         + ")";
                 System.out.println(sqlAddEmail);
-                db.runStatement(sqlAddEmail);
+                db.runUpdateStatement(sqlAddEmail);
                 System.out.println("You been added to the table.");
                 this.setVisible(false);
             } else {

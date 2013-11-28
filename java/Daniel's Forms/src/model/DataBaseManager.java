@@ -48,6 +48,20 @@ public class DataBaseManager {
     }
     
     /**
+     * Attempts to execute the SQL update statement.
+     * 
+     * @param statement the SQL statement.
+     * 
+     * @return The value indicating success or failure.
+     * 
+     * @throws SQLException The error is thrown when execution of a statement
+     *  fails.
+     */
+    public int runUpdateStatement( String statement ) throws SQLException {
+        return this.stm.executeUpdate(statement);
+    }
+    
+    /**
      * Cleans up data base resources such as connections.
      */
     public void dispose() {
