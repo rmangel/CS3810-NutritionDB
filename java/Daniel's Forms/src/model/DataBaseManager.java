@@ -7,39 +7,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * This class wraps the data base connection. This class is a singleton meaning
- *  that only one DataBaseManager can exist at a time in the JVM.
+ * This class wraps the data base connection.
  * 
  * @author Josh Gillham
  * @version 11-27-2013
  */
-public class DataBaseManager {
-    static private DataBaseManager instance = null;
-    
-    static public DataBaseManager getConnection(String connectionURL)
-            throws SQLException {
-        if ( instance != null ) {
-            return instance;
-        }
-        return instance = new DataBaseManager(connectionURL);
-    }
-    /**
-     * Check for the driver in the static constructor.
-     *  This check is meant to be helpful more than necessary.
-     */
-    static {
-        // Load Driver.
-        try{
-            Class.forName("org.apache.derby.jdbc.ClientDriver");
-        }
-        // If an exception is generated then try removing the driver,
-        //  closing the project, re-opening the project, and finally
-        //  re-adding the driver.
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    
+public class DataBaseManager {    
     /** Holds the data base connection. */
     private Connection conn;
     /** Holds the statement. Used to execute SQL statements. */
