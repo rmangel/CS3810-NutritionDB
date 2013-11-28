@@ -44,7 +44,7 @@ public class DataBaseManager {
      * @throws SQLException The error thrown potentially when connecting to the
      *  data base fails.
      */
-    public DataBaseManager ( String connectionURL) throws SQLException {
+    private DataBaseManager ( String connectionURL) throws SQLException {
          this.conn = DriverManager.getConnection(connectionURL);
          this.stm = conn.createStatement();
     }

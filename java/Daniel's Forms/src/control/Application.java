@@ -30,7 +30,7 @@ public class Application {
     static public Application getApplication( String connectionURL )
             throws SQLException {
         if ( instance == null ) {
-            instance = new Application( connectionURL );
+            instance = new Application( );
         }
         return instance;
     }
@@ -62,28 +62,5 @@ public class Application {
             e.printStackTrace();
             return false;
         }
-    }
-    
-    /** Holds a reference to the database connection. */
-    private DataBaseManager connection = null;
-    
-    /**
-     * Called by the singleton constructor to create an instance of the class.
-     * 
-     * @param connectionURL The database connection URL.
-     * 
-     * @throws SQLException The error occurs when forming a connection fails.
-     */
-    private Application( String connectionURL ) throws SQLException {
-        this.connection = new DataBaseManager(connectionURL);
-    }
-    
-    /**
-     * Called by other classes to get an active connection with the database.
-     * 
-     * @return The connection.
-     */
-    public DataBaseManager getConnection(){
-        return connection;
     }
 }

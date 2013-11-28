@@ -189,7 +189,7 @@ public class registration extends javax.swing.JFrame {
         try {
             if (!firstName.isEmpty() && !lastName.isEmpty() && !userName.isEmpty()
                     && !gender.isEmpty() && !passkey.isEmpty() && !em.isEmpty()) {
-                DataBaseManager db = Application.getApplication().getConnection();
+                DataBaseManager db = DataBaseManager.getDataBase();
                 String sqlGetCount = "select count(*) from app.users";
                 ResultSet countResult = db.runStatement(sqlGetCount);
                 countResult.next();

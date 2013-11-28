@@ -186,7 +186,7 @@ public class login extends javax.swing.JFrame {
         int count;
 
         try {
-            DataBaseManager db = Application.getApplication().getConnection();
+            DataBaseManager db = DataBaseManager.getDataBase();
             String sqlGetCount = "select count(*) from app.users";
             ResultSet countResult = db.runStatement(sqlGetCount);
             countResult.next();

@@ -32,7 +32,7 @@ public class Shared {
                         JOptionPane.ERROR_MESSAGE);
                 return false;
             }
-            DataBaseManager db = Application.getApplication().getConnection();
+            DataBaseManager db = DataBaseManager.getDataBase();
             String sqlStatement =
                     "select Uname, Password, Fname,"
                     + " Lname from USERS Where uname ='"
