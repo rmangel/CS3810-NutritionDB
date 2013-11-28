@@ -206,7 +206,10 @@ public class registration extends javax.swing.JFrame {
                 System.out.println(sqlAddEmail);
                 db.runUpdateStatement(sqlAddEmail);
                 System.out.println("You been added to the table.");
-                this.setVisible(false);
+                if ( !Shared.login(rootPane, userName, passkey ) ) {
+                    new login().setVisible(true);
+                }
+                this.dispose();
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Fill in all the fields.", "Login error",
                         JOptionPane.ERROR_MESSAGE);
