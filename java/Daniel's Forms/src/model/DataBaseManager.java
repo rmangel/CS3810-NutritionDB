@@ -5,14 +5,31 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
- * This class wraps the data base connection.
+ * This singleton class wraps the data base connection.
  * 
  * @author Josh Gillham
  * @version 11-27-2013
  */
 public class DataBaseManager {    
+    static private DataBaseManager instance = null;
+    
+    static public DataBaseManager getDataBase( String connectionURL )
+            throws SQLException {
+        if ( instance == null ) {
+            instance = new DataBaseManager(connectionURL);
+        }
+        return instance;
+        
+    }
+    
+    static public DataBaseManager getDataBase( ) {
+        return instance;
+    }
+    
     /** Holds the data base connection. */
     private Connection conn;
     /** Holds the statement. Used to execute SQL statements. */
@@ -59,6 +76,34 @@ public class DataBaseManager {
      */
     public int runUpdateStatement( String statement ) throws SQLException {
         return this.stm.executeUpdate(statement);
+    }
+    
+    /**
+     * Tries to match the login credentials to a record in the data base.
+     *
+     * @param uname The user name.
+     * @param password The password.
+     *
+     * @return True if the user name and password match or false otherwise.
+     */
+    public boolean testCredintials( String uname, String password ) {
+        String sqlStatement =
+                    "select Uname, Password, Fname,"
+                    + " Lname from USERS Where uname ='"
+                    + uname + "' and password ='"
+                    + password + "'";
+        ResultSet result;
+        try {
+            result = this.runStatement(sqlStatement);
+
+            if (!result.next()) {
+                return false;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(DataBaseManager.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+        return true;
     }
     
     /**
