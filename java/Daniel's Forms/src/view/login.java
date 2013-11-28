@@ -4,22 +4,17 @@
  */
 package view;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import control.Application;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import javax.swing.JOptionPane;
+import model.DataBaseManager;
 
 /**
  *
  * @author ArcadeHitman
  */
 public class login extends javax.swing.JFrame {
-
-    public String DB_URL;
-    public String uName, fname, lname;
-    public boolean login;
-
+    
     /**
      * Creates new form NutritionDB
      */
@@ -175,64 +170,56 @@ public class login extends javax.swing.JFrame {
             String userN = userName.getText();
             String pass = password.getText();
             System.out.println("username is " + userN + " password is " + pass);
-            if (!userN.isEmpty() && !pass.isEmpty()) {
-                Connection conn = DriverManager.getConnection(DB_URL);
-                System.out.println("connecting to the db");
-                Statement stmt = conn.createStatement();
-                String sqlStatement = "select Uname, Password, Fname, Lname from USERS Where uname ='" + userN + "' and password ='"
-                        + pass + "'";
-                System.out.println(sqlStatement);
-                ResultSet result = stmt.executeQuery(sqlStatement);
-
-
-                if (result.next()) {
-                    System.out.println(result.getString("Uname") + " " + result.getString("Password"));
-                    fname = result.getString("Fname");
-                    lname = result.getString("Lname");
-                    JOptionPane.showMessageDialog(rootPane, "Login Successful");
-                    setUName(result.getString("Uname"));
-                    login = true;
-                    Connection conn2 = DriverManager.getConnection(DB_URL);
-                    System.out.println("connecting to the db");
-                    Statement stmt2 = conn2.createStatement();
-                    String sqlStatement2 = "SELECT DIETITION.USER_ID" +
-                            " FROM DIETITION NATURAL JOIN USERS WHERE " +
-                            "Users.Uname = '" + userN + "'";
-                    System.out.println(sqlStatement2);
-                    ResultSet result2 = stmt2.executeQuery(sqlStatement2);
-                    boolean canPrescribe = result2.next();
-                    System.out.println( "canPrescribe" + canPrescribe );
-                    stmt2.close();
-                    conn2.close();
-                    if ( canPrescribe ) {
-                        dietitianhome dhome = new dietitianhome(fname, lname);
-                        dhome.setVisible(login);
-                    }
-                    else {
-                        usermain umain = new usermain(fname, lname);
-                        umain.setVisible(login);
-                    }
-                } else {
-                    JOptionPane.showMessageDialog(rootPane, "Username and/or password incorrect.", "Login error",
-                            JOptionPane.ERROR_MESSAGE);
-                }
-                stmt.close();
-                conn.close();
-            } else {
+            if (userN.isEmpty() || pass.isEmpty()) {
                 JOptionPane.showMessageDialog(rootPane, "Enter username and password.", "Login error",
                         JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            DataBaseManager db = Application.getApplication().getConnection();
+            String sqlStatement = "select Uname, Password, Fname, Lname from USERS Where uname ='" + userN + "' and password ='"
+                    + pass + "'";
+            System.out.println(sqlStatement);
+
+            ResultSet result = db.runStatement(sqlStatement);
+
+            if (!result.next()) {
+                JOptionPane.showMessageDialog(rootPane, "Username and/or password incorrect.", "Login error",
+                        JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            
+            System.out.println(result.getString("Uname") + " " + result.getString("Password"));
+            String fname = result.getString("Fname");
+            String lname = result.getString("Lname");
+            String uname = result.getString("Uname");
+            boolean login = true;
+            
+            JOptionPane.showMessageDialog(rootPane, "Login Successful");
+            
+            String sqlStatement2 = "SELECT DIETITION.USER_ID" +
+                    " FROM DIETITION NATURAL JOIN USERS WHERE " +
+                    "Users.Uname = '" + userN + "'";
+            System.out.println(sqlStatement2);
+            ResultSet result2 = db.runStatement(sqlStatement2);
+            boolean canPrescribe = result2.next();
+            System.out.println( "canPrescribe" + canPrescribe );
+            if ( canPrescribe ) {
+                dietitianhome dhome = new dietitianhome(fname, lname);
+                dhome.setVisible(login);
+            }
+            else {
+                usermain umain = new usermain(fname, lname);
+                umain.setVisible(login);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(rootPane, "There was an error login in." + ex.getMessage(), "Login error",
                     JOptionPane.ERROR_MESSAGE);
         }
-
-
     }//GEN-LAST:event_BtnSignInActionPerformed
 
     private void BtnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegisterActionPerformed
-        registration form = new registration(DB_URL);
+        registration form = new registration("");
         form.setVisible(true);
     }//GEN-LAST:event_BtnRegisterActionPerformed
 
@@ -244,15 +231,14 @@ public class login extends javax.swing.JFrame {
         int count;
 
         try {
-            Connection conn = DriverManager.getConnection(DB_URL);
-            Statement stmt = conn.createStatement();
+            DataBaseManager db = Application.getApplication().getConnection();
             String sqlGetCount = "select count(*) from app.users";
-            ResultSet countResult = stmt.executeQuery(sqlGetCount);
+            ResultSet countResult = db.runStatement(sqlGetCount);
             countResult.next();
             count = countResult.getInt(1);
             System.out.println("There are " + count + " number of users.");
             String sqlStatement = "select Fname, Lname, Uname from APP.USERS";
-            ResultSet result = stmt.executeQuery(sqlStatement);
+            ResultSet result = db.runStatement(sqlStatement);
             System.out.println("The result of the Users is: ");
 
             while (result.next()) {
@@ -260,59 +246,11 @@ public class login extends javax.swing.JFrame {
                         + result.getString("Lname") + " "
                         + result.getString("Uname"));
             }
-            stmt.close();
-            conn.close();
         } catch (Exception ex) {
             System.out.println("ERROR: " + ex.getMessage());
         }
     }//GEN-LAST:event_BtnListUsersActionPerformed
 
-    public String returnUName() {
-        return uName;
-    }
-
-    private void setUName(String u) {
-        uName = u;
-    }
-
-    public Boolean loginCheck() {
-        return login;
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new login().setVisible(true);
-            }
-        });
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnListUsers;
     private javax.swing.JButton BtnRegister;
