@@ -211,6 +211,7 @@ public class login extends javax.swing.JFrame {
                 usermain umain = new usermain(fname, lname);
                 umain.setVisible(login);
             }
+            this.dispose();
         } catch (Exception ex) {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(rootPane, "There was an error login in." + ex.getMessage(), "Login error",
@@ -221,6 +222,7 @@ public class login extends javax.swing.JFrame {
     private void BtnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegisterActionPerformed
         registration form = new registration("");
         form.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_BtnRegisterActionPerformed
 
     private void userNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameActionPerformed
