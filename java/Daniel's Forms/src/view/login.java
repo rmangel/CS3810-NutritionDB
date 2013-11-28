@@ -166,56 +166,9 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSignInActionPerformed
-        try {
-            String userN = userName.getText();
-            String pass = password.getText();
-            System.out.println("username is " + userN + " password is " + pass);
-            if (userN.isEmpty() || pass.isEmpty()) {
-                JOptionPane.showMessageDialog(rootPane, "Enter username and password.", "Login error",
-                        JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-            DataBaseManager db = Application.getApplication().getConnection();
-            String sqlStatement = "select Uname, Password, Fname, Lname from USERS Where uname ='" + userN + "' and password ='"
-                    + pass + "'";
-            System.out.println(sqlStatement);
-
-            ResultSet result = db.runStatement(sqlStatement);
-
-            if (!result.next()) {
-                JOptionPane.showMessageDialog(rootPane, "Username and/or password incorrect.", "Login error",
-                        JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-            
-            System.out.println(result.getString("Uname") + " " + result.getString("Password"));
-            String fname = result.getString("Fname");
-            String lname = result.getString("Lname");
-            String uname = result.getString("Uname");
-            boolean login = true;
-            
-            JOptionPane.showMessageDialog(rootPane, "Login Successful");
-            
-            String sqlStatement2 = "SELECT DIETITION.USER_ID" +
-                    " FROM DIETITION NATURAL JOIN USERS WHERE " +
-                    "Users.Uname = '" + userN + "'";
-            System.out.println(sqlStatement2);
-            ResultSet result2 = db.runStatement(sqlStatement2);
-            boolean canPrescribe = result2.next();
-            System.out.println( "canPrescribe" + canPrescribe );
-            if ( canPrescribe ) {
-                dietitianhome dhome = new dietitianhome(fname, lname);
-                dhome.setVisible(login);
-            }
-            else {
-                usermain umain = new usermain(fname, lname);
-                umain.setVisible(login);
-            }
+        if ( Shared.login(rootPane, 
+                this.userName.getText(), this.password.getText() ) ) {
             this.dispose();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(rootPane, "There was an error login in." + ex.getMessage(), "Login error",
-                    JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_BtnSignInActionPerformed
 
