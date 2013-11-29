@@ -27,20 +27,10 @@ public class Application {
      * 
      * @throws SQLException The error occurs when forming the connection fails.
      */
-    static public Application getApplication( String connectionURL )
-            throws SQLException {
+    static public Application getApplication( ) {
         if ( instance == null ) {
             instance = new Application( );
         }
-        return instance;
-    }
-    
-    /**
-     * Accesses the instance of application.
-     * 
-     * @return The instance.
-     */
-    static public Application getApplication( ) {
         return instance;
     }
     

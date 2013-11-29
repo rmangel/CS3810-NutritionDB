@@ -5,6 +5,7 @@
 package start;
 
 import control.Application;
+import model.DataBaseManager;
 import java.sql.SQLException;
 import java.sql.SQLNonTransientConnectionException;
 import java.util.logging.Level;
@@ -33,7 +34,8 @@ public class DesktopGUI {
         }
         Application app;
         try {
-            app = Application.getApplication( DB_URL );
+            app = Application.getApplication( );
+            DataBaseManager.getDataBase( DB_URL );
         }
         // Can occur when the server is not running or when the database name
         //  is not found.
