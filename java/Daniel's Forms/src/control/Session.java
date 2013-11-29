@@ -28,14 +28,14 @@ public class Session {
     static public Session getSession( String uname, String password ) {
         if ( instance == null ) {
             DataBaseManager db = DataBaseManager.getDataBase();
-            ResultSet result = db.getCredintials(uname, password);
-            if ( result == null ) {
-                return instance;
-            }
+            
             String fname;
             String lname;
-            boolean canPrescribe = db.testCanPrescribe(uname);
             try {
+                ResultSet result = db.getCredintials(uname, password);
+                if ( result == null || !result.next() ) {
+                    return instance;
+                }
                 fname = result.getString( "Fname" );
                 lname = result.getString( "Lname" );
             }
@@ -46,6 +46,7 @@ public class Session {
                     "Table attributes have changed."
                 );
             }
+            boolean canPrescribe = db.testCanPrescribe(uname);
             instance =
                 new Session( fname, lname, uname, password, canPrescribe );
         }
