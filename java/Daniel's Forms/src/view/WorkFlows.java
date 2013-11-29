@@ -13,7 +13,7 @@ import model.DataBaseManager;
  * @author Josh Gillham
  * @version 11-28-2013
  */
-public class Shared {
+public class WorkFlows {
     /**
      * Logs the user into the database.
      * 

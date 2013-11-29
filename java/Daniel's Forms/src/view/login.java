@@ -166,7 +166,7 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSignInActionPerformed
-        if ( Shared.login(rootPane, 
+        if ( WorkFlows.login(rootPane, 
                 this.userName.getText(), this.password.getText() ) ) {
             this.dispose();
         }

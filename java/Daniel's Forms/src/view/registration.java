@@ -206,7 +206,7 @@ public class registration extends javax.swing.JFrame {
                 System.out.println(sqlAddEmail);
                 db.runUpdateStatement(sqlAddEmail);
                 System.out.println("You been added to the table.");
-                if ( !Shared.login(rootPane, userName, passkey ) ) {
+                if ( !WorkFlows.login(rootPane, userName, passkey ) ) {
                     new login().setVisible(true);
                 }
                 this.dispose();
