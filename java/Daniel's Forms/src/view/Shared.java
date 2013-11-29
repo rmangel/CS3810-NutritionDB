@@ -1,6 +1,7 @@
 package view;
 
 import control.Application;
+import control.Session;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import javax.swing.JRootPane;
@@ -32,46 +33,27 @@ public class Shared {
                         JOptionPane.ERROR_MESSAGE);
                 return false;
             }
-            DataBaseManager db = DataBaseManager.getDataBase();
-            String sqlStatement =
-                    "select Uname, Password, Fname,"
-                    + " Lname from USERS Where uname ='"
-                    + userN + "' and password ='"
-                    + pass + "'";
-            System.out.println(sqlStatement);
 
-            ResultSet result = db.runStatement(sqlStatement);
+            Session session = Session.getSession( userN, pass );
 
-            if (!result.next()) {
+            if ( session == null ) {
                 JOptionPane.showMessageDialog(rootPane, 
                         "Username and/or password incorrect.", "Login error",
                         JOptionPane.ERROR_MESSAGE);
                 return false;
             }
-            
-            System.out.println(result.getString("Uname")
-                    + " " + result.getString("Password"));
-            String fname = result.getString("Fname");
-            String lname = result.getString("Lname");
-            String uname = result.getString("Uname");
-            boolean login = true;
+            String fname = session.getFirstName();
+            String lname = session.getLastName();
             
             JOptionPane.showMessageDialog(rootPane, "Login Successful");
             
-            String sqlStatement2 = "SELECT DIETITION.USER_ID" +
-                    " FROM DIETITION NATURAL JOIN USERS WHERE " +
-                    "Users.Uname = '" + userN + "'";
-            System.out.println(sqlStatement2);
-            ResultSet result2 = db.runStatement(sqlStatement2);
-            boolean canPrescribe = result2.next();
-            System.out.println( "canPrescribe" + canPrescribe );
-            if ( canPrescribe ) {
+            if ( session.canPrescribe ) {
                 dietitianhome dhome = new dietitianhome(fname, lname);
-                dhome.setVisible(login);
+                dhome.setVisible(true);
             }
             else {
                 usermain umain = new usermain(fname, lname);
-                umain.setVisible(login);
+                umain.setVisible(true);
             }
             return true;
         } catch (Exception ex) {

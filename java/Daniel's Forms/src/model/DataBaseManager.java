@@ -86,7 +86,7 @@ public class DataBaseManager {
      *
      * @return True if the user name and password match or false otherwise.
      */
-    public boolean testCredintials( String uname, String password ) {
+    public ResultSet getCredintials( String uname, String password ) {
         String sqlStatement =
                     "select Uname, Password, Fname,"
                     + " Lname from USERS Where uname ='"
@@ -95,15 +95,26 @@ public class DataBaseManager {
         ResultSet result;
         try {
             result = this.runStatement(sqlStatement);
-
-            if (!result.next()) {
-                return false;
-            }
         } catch (SQLException ex) {
             Logger.getLogger(DataBaseManager.class.getName()).log(Level.SEVERE, null, ex);
-            return false;
+            return null;
         }
-        return true;
+        return result;
+    }
+    
+    public boolean testCanPrescribe( String uname ) {
+        String sqlStatement2 = "SELECT DIETITION.USER_ID" +
+                    " FROM DIETITION NATURAL JOIN USERS WHERE " +
+                    "Users.Uname = '" + uname + "'";
+        System.out.println(sqlStatement2);
+        try {
+            ResultSet result2 = this.runStatement(sqlStatement2);
+            return result2.next();
+        }
+        catch ( SQLException ex ) {
+            ex.printStackTrace();
+        }
+        return false;
     }
     
     /**

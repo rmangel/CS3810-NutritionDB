@@ -1,6 +1,8 @@
 package control;
 
 import model.DataBaseManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * This singleton class holds the login session creditals. The singleton
@@ -25,9 +27,27 @@ public class Session {
      */
     static public Session getSession( String uname, String password ) {
         if ( instance == null ) {
-            if ( DataBaseManager.getDataBase().testCredintials(uname, password)) {
-                instance = new Session( uname, password );
+            DataBaseManager db = DataBaseManager.getDataBase();
+            ResultSet result = db.getCredintials(uname, password);
+            if ( result == null ) {
+                return instance;
             }
+            String fname;
+            String lname;
+            boolean canPrescribe = db.testCanPrescribe(uname);
+            try {
+                fname = result.getString( "Fname" );
+                lname = result.getString( "Lname" );
+            }
+            // Usually caused by changing database tables.
+            catch ( SQLException ex ) {
+                ex.printStackTrace();
+                throw new UnsupportedOperationException(
+                    "Table attributes have changed."
+                );
+            }
+            instance =
+                new Session( fname, lname, uname, password, canPrescribe );
         }
         return instance;
     }
@@ -48,9 +68,15 @@ public class Session {
     }
     
     /** Holds the user name. */
-    final public String uname;
+    final private String uname;
     /** Holds the user password. */
-    final public String password;
+    final private String password;
+    /** Holds the first name. */
+    private String fname;
+    /** Holds the last name. */
+    private String lname;
+    /** True indicates dietitian privileges. */
+    final public boolean canPrescribe;
 
     /**
      * Creates an instance of the class with login credentials.
@@ -58,8 +84,20 @@ public class Session {
      * @param uname The user name.
      * @param password The password.
      */
-    private Session( String uname, String password ) {
+    private Session( String fname, String lname,
+            String uname, String password, boolean canPrescribe ) {
         this.uname = uname;
         this.password = password;
+        this.fname = fname;
+        this.lname = lname;
+        this.canPrescribe = canPrescribe;
+    }
+
+    public String getFirstName() {
+        return this.fname;
+    }
+
+    public String getLastName() {
+        return this.lname;
     }
 }
