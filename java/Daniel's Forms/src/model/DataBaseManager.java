@@ -221,6 +221,63 @@ public class DataBaseManager {
     }
     
     /**
+     * This class has all variables declared final so that it can function as
+     *  a tuple.
+     */
+    static public class NutritionFacts {
+      /** Holds the fat. */
+      public final int fat;
+      /** Holds the calories. */
+      public final int calories;
+      /**
+       * Constructs the tuple.
+       * 
+       * @param fat The fat.
+       * @param calories The calories.
+       */
+      public NutritionFacts( int fat, int calories ) {
+        this.fat = fat;
+        this.calories = calories;
+      }
+    }
+    
+    /**
+     * Gets a tuple with the nutritional facts for a meal name.
+     * 
+     * @param mealName The meal name.
+     * 
+     * @return A tuple of nutritional facts.
+     */
+    public NutritionFacts getNutritionForMeal( String mealName ) {
+      String query =
+        "SELECT SUM( I.FAT ) AS FAT, SUM( I.CALORIES ) AS CAL " +
+        "FROM MEALS M " +
+        "JOIN MEALSCOURSES MC " +
+        "ON MC.MEAL_ID = M.MEAL_ID " +
+        "JOIN COURSES C " +
+        "ON C.COURSE_ID = MC.COURSE_ID " +
+        "JOIN INGREDIENTSCOURSES IC " +
+        "ON IC.COURSE_ID = C.COURSE_ID " +
+        "JOIN INGREDIENTS I " +
+        "ON I.INGREDIENT_ID = IC.INGREDIENT_ID " +
+        "WHERE M.\"NAME\" = \'" + mealName  + "\'";
+      System.out.println( query );
+      try {
+          ResultSet result = this.runStatement(query);
+          if ( !result.next() ) {
+            return null;
+          }
+          int fat = Integer.parseInt( result.getString( "FAT" ) );
+          int cal = Integer.parseInt( result.getString( "CAL" ) );
+          return new NutritionFacts( fat, cal );
+      }
+      catch ( SQLException ex ) {
+          ex.printStackTrace();
+      }
+      return null;
+    }
+    
+    /**
      * Cleans up data base resources such as connections.
      */
     public void dispose() {
