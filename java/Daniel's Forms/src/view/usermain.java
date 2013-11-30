@@ -4,11 +4,23 @@
  */
 package view;
 
+import control.Session;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import model.DataBaseManager;
+import org.apache.derby.client.am.DateTime;
+
 /**
  *
  * @author ArcadeHitman
  */
 public class usermain extends javax.swing.JFrame {
+    private Session usession;
+    private DataBaseManager db;
+    private List< String > meals;
+    private Date viewDate;
+    private int currentMeal = 0;
 
     /**
      * Creates new form usermain
@@ -16,6 +28,41 @@ public class usermain extends javax.swing.JFrame {
     public usermain( String fn, String ln) {
         initComponents();
         displayName.setText("Hello " + fn + " " + ln +".");
+        this.usession = Session.getSession();
+        this.db = DataBaseManager.getDataBase();
+        this.updateDate( new Date() );
+        
+    }
+    
+    /**
+     * Updates the date field and finds associated meals.
+     * 
+     * @param nDate The date to show.
+     */
+    private void updateDate( Date nDate ) {
+      this.viewDate = nDate;
+      this.lblDate.setText( this.viewDate.toString() );
+      this.meals =
+          this.db.getMealsForDate(this.usession.getUserName(), this.viewDate );
+      System.out.println( this.meals.size() );
+      System.out.println( this.meals );
+      this.updateMeal( 0 );
+    }
+    
+    /**
+     * Updates the meal name field and lists out characteristics such as courses.
+     * 
+     * @param meal The meal index.
+     */
+    private void updateMeal( int meal ) {
+      int mealCount = this.meals.size();
+      if ( mealCount > 0 ) {
+        this.currentMeal = ( mealCount + meal ) % mealCount;
+        this.lblMealName.setText( this.meals.get( this.currentMeal ) );
+      }
+      else {
+        this.lblMealName.setText( "" );
+      }
     }
     
     public usermain(){
@@ -34,19 +81,19 @@ public class usermain extends javax.swing.JFrame {
         displayName = new javax.swing.JLabel();
         btnViewDietaryRecommendation = new javax.swing.JButton();
         btnPreferences = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        btnDateBack = new javax.swing.JButton();
+        lblDate = new javax.swing.JLabel();
+        btnDateForward = new javax.swing.JButton();
+        btnMealForward = new javax.swing.JButton();
+        lblMealName = new javax.swing.JLabel();
+        btnMealBack = new javax.swing.JButton();
+        lblNutrition = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblIngredientList = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         canvas1 = new java.awt.Canvas();
+        jLabel9 = new javax.swing.JLabel();
+        lblCourseList = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,29 +113,49 @@ public class usermain extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("<-");
+        btnDateBack.setText("<-");
+        btnDateBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDateBackActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setText("*Date*");
+        lblDate.setText("*Date*");
 
-        jButton2.setText("->");
+        btnDateForward.setText("->");
+        btnDateForward.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDateForwardActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("->");
+        btnMealForward.setText("->");
+        btnMealForward.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMealForwardActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setText("*Meal Name*");
+        lblMealName.setText("*Meal Name*");
 
-        jButton7.setText("<-");
+        btnMealBack.setText("<-");
+        btnMealBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMealBackActionPerformed(evt);
+            }
+        });
 
-        jLabel8.setText("*instructions*");
-
-        jLabel7.setText("Preperation:");
-
-        jLabel6.setText("*fat, caloris, sodium, etc.*");
+        lblNutrition.setText("*fat, caloris, sodium, etc.*");
 
         jLabel5.setText("Nutritional Facts:");
 
-        jLabel4.setText("*List*");
+        lblIngredientList.setText("*List*");
 
         jLabel3.setText("Ingredients:");
+
+        jLabel9.setText("Courses:");
+
+        lblCourseList.setText("*List*");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,18 +166,16 @@ public class usermain extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addComponent(jButton7))
+                            .addComponent(btnDateBack)
+                            .addComponent(btnMealBack))
                         .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton6)))
+                            .addComponent(lblMealName)
+                            .addComponent(lblDate))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnDateForward, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMealForward, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 137, Short.MAX_VALUE)
@@ -126,22 +191,26 @@ public class usermain extends javax.swing.JFrame {
                                 .addContainerGap())))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel4))
                             .addComponent(jLabel3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel6))
                             .addComponent(jLabel5)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addComponent(jLabel8))
-                            .addComponent(jLabel7))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblIngredientList)
+                                    .addComponent(lblNutrition))))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(lblCourseList)))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -151,29 +220,29 @@ public class usermain extends javax.swing.JFrame {
                 .addComponent(displayName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(lblDate)
+                    .addComponent(btnDateBack)
+                    .addComponent(btnDateForward))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jButton7)
-                    .addComponent(jButton6))
+                    .addComponent(lblMealName)
+                    .addComponent(btnMealBack)
+                    .addComponent(btnMealForward))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblCourseList)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(lblIngredientList)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
+                .addComponent(lblNutrition)
+                .addGap(70, 70, 70)
                 .addComponent(btnViewDietaryRecommendation)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPreferences)
@@ -190,6 +259,28 @@ public class usermain extends javax.swing.JFrame {
     private void btnPreferencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreferencesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPreferencesActionPerformed
+
+  private void btnMealBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMealBackActionPerformed
+    this.updateMeal( this.currentMeal - 1 );
+  }//GEN-LAST:event_btnMealBackActionPerformed
+
+  private void btnMealForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMealForwardActionPerformed
+    this.updateMeal( this.currentMeal + 1 );
+  }//GEN-LAST:event_btnMealForwardActionPerformed
+
+  private void btnDateBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDateBackActionPerformed
+    Calendar cal = Calendar.getInstance();
+    cal.setTime( this.viewDate );
+    cal.add( cal.DATE, -1 );
+    this.updateDate( cal.getTime() );
+  }//GEN-LAST:event_btnDateBackActionPerformed
+
+  private void btnDateForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDateForwardActionPerformed
+    Calendar cal = Calendar.getInstance();
+    cal.setTime( this.viewDate );
+    cal.add( cal.DATE, 1 );
+    this.updateDate( cal.getTime() );
+  }//GEN-LAST:event_btnDateForwardActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,21 +317,21 @@ public class usermain extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDateBack;
+    private javax.swing.JButton btnDateForward;
+    private javax.swing.JButton btnMealBack;
+    private javax.swing.JButton btnMealForward;
     private javax.swing.JButton btnPreferences;
     private javax.swing.JButton btnViewDietaryRecommendation;
     private java.awt.Canvas canvas1;
     private javax.swing.JLabel displayName;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lblCourseList;
+    private javax.swing.JLabel lblDate;
+    private javax.swing.JLabel lblIngredientList;
+    private javax.swing.JLabel lblMealName;
+    private javax.swing.JLabel lblNutrition;
     // End of variables declaration//GEN-END:variables
 }

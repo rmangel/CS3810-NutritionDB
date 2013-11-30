@@ -46,15 +46,8 @@ public class WorkFlows {
             String lname = session.getLastName();
             
             JOptionPane.showMessageDialog(rootPane, "Login Successful");
-            
-            if ( session.canPrescribe ) {
-                dietitianhome dhome = new dietitianhome(fname, lname);
-                dhome.setVisible(true);
-            }
-            else {
-                usermain umain = new usermain(fname, lname);
-                umain.setVisible(true);
-            }
+            usermain umain = new usermain(fname, lname);
+            umain.setVisible(true);
             return true;
         } catch (Exception ex) {
             ex.printStackTrace();

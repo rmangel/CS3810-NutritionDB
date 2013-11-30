@@ -101,4 +101,8 @@ public class Session {
     public String getLastName() {
         return this.lname;
     }
+    
+    public String getUserName() {
+        return this.uname;
+    }
 }
