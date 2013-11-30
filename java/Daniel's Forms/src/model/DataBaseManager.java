@@ -186,6 +186,41 @@ public class DataBaseManager {
     }
     
     /**
+     * Gets a list of ingredients for a meal.
+     * 
+     * @param meal The meal name.
+     * 
+     * @return The list of ingredients.
+     */
+    public List< String > getIngredientsForMeal( String meal ) {
+      String query =
+        "SELECT I.\"NAME\" " +
+        "FROM MEALS M " +
+        "JOIN MEALSCOURSES MC " +
+        "ON MC.MEAL_ID = M.MEAL_ID " +
+        "JOIN COURSES C " +
+        "ON C.COURSE_ID = MC.COURSE_ID " +
+        "JOIN INGREDIENTSCOURSES IC " +
+        "ON IC.COURSE_ID = C.COURSE_ID " +
+        "JOIN INGREDIENTS I " +
+        "ON I.INGREDIENT_ID = IC.INGREDIENT_ID " +
+        "WHERE M.\"NAME\" = \'" + meal + "\' ";
+      System.out.println( query );
+      try {
+          List< String > ret = new LinkedList< String >();
+          ResultSet result = this.runStatement(query);
+          while ( result.next() ) {
+            ret.add( result.getString( "NAME" ) );
+          }
+          return ret;
+      }
+      catch ( SQLException ex ) {
+          ex.printStackTrace();
+      }
+      return null;
+    }
+    
+    /**
      * Cleans up data base resources such as connections.
      */
     public void dispose() {
