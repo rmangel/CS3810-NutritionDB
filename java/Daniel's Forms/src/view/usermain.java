@@ -58,7 +58,10 @@ public class usermain extends javax.swing.JFrame {
       int mealCount = this.meals.size();
       if ( mealCount > 0 ) {
         this.currentMeal = ( mealCount + meal ) % mealCount;
-        this.lblMealName.setText( this.meals.get( this.currentMeal ) );
+        String mealName = this.meals.get( this.currentMeal );
+        this.lblMealName.setText( mealName );
+        this.lblCourseList.setText(
+                this.db.getCoursesForMeal( mealName).toString() );
       }
       else {
         this.lblMealName.setText( "" );
