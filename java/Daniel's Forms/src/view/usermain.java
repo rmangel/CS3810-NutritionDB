@@ -9,7 +9,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import model.DataBaseManager;
-import org.apache.derby.client.am.DateTime;
+import model.DataBaseManager.NutritionFacts;
 
 /**
  *
@@ -64,6 +64,10 @@ public class usermain extends javax.swing.JFrame {
                 this.db.getCoursesForMeal( mealName ).toString() );
         this.lblIngredientList.setText(
                 this.db.getIngredientsForMeal( mealName ).toString() );
+        NutritionFacts nf = this.db.getNutritionForMeal( mealName );
+        String strNF =
+                String.format( "Fat: %d, Calories: %d", nf.fat, nf.calories);
+        this.lblNutrition.setText( strNF );
       }
       else {
         this.lblMealName.setText( "" );
