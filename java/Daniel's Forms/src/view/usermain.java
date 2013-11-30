@@ -61,7 +61,9 @@ public class usermain extends javax.swing.JFrame {
         String mealName = this.meals.get( this.currentMeal );
         this.lblMealName.setText( mealName );
         this.lblCourseList.setText(
-                this.db.getCoursesForMeal( mealName).toString() );
+                this.db.getCoursesForMeal( mealName ).toString() );
+        this.lblIngredientList.setText(
+                this.db.getIngredientsForMeal( mealName ).toString() );
       }
       else {
         this.lblMealName.setText( "" );
