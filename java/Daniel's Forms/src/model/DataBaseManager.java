@@ -156,6 +156,36 @@ public class DataBaseManager {
     }
     
     /**
+     * Gets a list of courses for a specific meal.
+     * 
+     * @param meal The name of the meal.
+     * @return A list of courses.
+     */
+    public List< String > getCoursesForMeal( String meal ) {
+      String query =
+        "SELECT C.\"NAME\" " +
+        "FROM MEALS M " +
+        "JOIN MEALSCOURSES MC " +
+        "ON MC.MEAL_ID = M.MEAL_ID " +
+        "JOIN COURSES C " +
+        "ON C.COURSE_ID = MC.COURSE_ID " +
+        "WHERE M.\"NAME\" = \'" + meal + "\'";
+      System.out.println( query );
+      try {
+          List< String > ret = new LinkedList< String >();
+          ResultSet result = this.runStatement(query);
+          while ( result.next() ) {
+            ret.add( result.getString( "NAME" ) );
+          }
+          return ret;
+      }
+      catch ( SQLException ex ) {
+          ex.printStackTrace();
+      }
+      return null;
+    }
+    
+    /**
      * Cleans up data base resources such as connections.
      */
     public void dispose() {
