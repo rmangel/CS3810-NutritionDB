@@ -5,6 +5,10 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -115,6 +119,40 @@ public class DataBaseManager {
             ex.printStackTrace();
         }
         return false;
+    }
+    
+    /**
+     * Gets a list of meals for date and user.
+     * 
+     * @param uname The user name.
+     * @param date The date.
+     * 
+     * @return A list of meals.
+     */
+    public List<String> getMealsForDate( String uname, Date date ) {
+      String query =
+        "SELECT M.\"NAME\" " +
+        "FROM USERS U " +
+        "JOIN USERSELECTEDMEALS UM " +
+        "ON U.USER_ID = UM.USER_ID " +
+        "JOIN MEALS M " +
+        "ON UM.MEAL_ID = M.MEAL_ID " +
+        "WHERE UM.\"DATE\" = \'" +
+          new SimpleDateFormat("yyyy-MM-dd").format(date) + "\' " +
+        "AND U.UNAME = \'" + uname + "\'";
+      System.out.println( query );
+      try {
+          List< String > ret = new LinkedList< String >();
+          ResultSet result = this.runStatement(query);
+          while ( result.next() ) {
+            ret.add( result.getString( "NAME" ) );
+          }
+          return ret;
+      }
+      catch ( SQLException ex ) {
+          ex.printStackTrace();
+      }
+      return null;
     }
     
     /**
