@@ -23,16 +23,16 @@ INSERT INTO dayplans VALUES ( '2013-11-28', 2 );
 
 INSERT INTO ingredients VALUES ( 1,'Chicken', 8, 250 );
 INSERT INTO ingredients VALUES ( 2,'Waffles', 1, 100 );
-INSERT INTO ingredients VALUES ( 3,'Tofu', 0, 50 );
-INSERT INTO ingredients VALUES ( 4,'Vegetable Broth', 0, 90 );
-INSERT INTO ingredients VALUES ( 5,'Bacon', 0, 90 );
-INSERT INTO ingredients VALUES ( 6,'Eggs', 0, 90 );
-INSERT INTO ingredients VALUES ( 7,'Sausage', 0, 90 );
+INSERT INTO ingredients VALUES ( 3,'Tofu', 1, 50 );
+INSERT INTO ingredients VALUES ( 4,'Vegetable Broth', 1, 90 );
+INSERT INTO ingredients VALUES ( 5,'Bacon', 6, 90 );
+INSERT INTO ingredients VALUES ( 6,'Eggs', 1, 90 );
+INSERT INTO ingredients VALUES ( 7,'Sausage', 5, 90 );
 INSERT INTO ingredients VALUES ( 8,'Bread', 0, 90 );
-INSERT INTO ingredients VALUES ( 9,'Butter', 0, 90 );
-INSERT INTO ingredients VALUES ( 10,'Syrup', 0, 90 );
-INSERT INTO ingredients VALUES ( 11,'Honey', 0, 90 );
-INSERT INTO ingredients VALUES ( 12,'General Sauce', 0, 90 );
+INSERT INTO ingredients VALUES ( 9,'Butter', 3, 90 );
+INSERT INTO ingredients VALUES ( 10,'Syrup', 1, 90 );
+INSERT INTO ingredients VALUES ( 11,'Honey', 1, 90 );
+INSERT INTO ingredients VALUES ( 12,'General Sauce', 5, 90 );
 
 INSERT INTO courses VALUES ( 1,'Eggs Over Easy', 1 );
 INSERT INTO courses VALUES ( 2,'Scrambled Eggs', 1 );
