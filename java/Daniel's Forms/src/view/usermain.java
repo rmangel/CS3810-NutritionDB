@@ -31,6 +31,7 @@ public class usermain extends javax.swing.JFrame {
         this.usession = Session.getSession();
         this.db = DataBaseManager.getDataBase();
         this.updateDate( new Date() );
+        this.btnDietitionPanel.setVisible( this.usession.canPrescribe );
         
     }
     
@@ -103,6 +104,7 @@ public class usermain extends javax.swing.JFrame {
         canvas1 = new java.awt.Canvas();
         jLabel9 = new javax.swing.JLabel();
         lblCourseList = new javax.swing.JLabel();
+        btnDietitionPanel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -166,6 +168,13 @@ public class usermain extends javax.swing.JFrame {
 
         lblCourseList.setText("*List*");
 
+        btnDietitionPanel.setText("View Dietition Panel");
+        btnDietitionPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDietitionPanelActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -221,6 +230,10 @@ public class usermain extends javax.swing.JFrame {
                                 .addGap(10, 10, 10)
                                 .addComponent(lblCourseList)))))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnDietitionPanel)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -251,7 +264,9 @@ public class usermain extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblNutrition)
-                .addGap(70, 70, 70)
+                .addGap(35, 35, 35)
+                .addComponent(btnDietitionPanel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnViewDietaryRecommendation)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPreferences)
@@ -291,6 +306,12 @@ public class usermain extends javax.swing.JFrame {
     this.updateDate( cal.getTime() );
   }//GEN-LAST:event_btnDateForwardActionPerformed
 
+    private void btnDietitionPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDietitionPanelActionPerformed
+        if ( WorkFlows.viewDietitionPanel() ) {
+            this.dispose();
+        }
+    }//GEN-LAST:event_btnDietitionPanelActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -328,6 +349,7 @@ public class usermain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDateBack;
     private javax.swing.JButton btnDateForward;
+    private javax.swing.JButton btnDietitionPanel;
     private javax.swing.JButton btnMealBack;
     private javax.swing.JButton btnMealForward;
     private javax.swing.JButton btnPreferences;

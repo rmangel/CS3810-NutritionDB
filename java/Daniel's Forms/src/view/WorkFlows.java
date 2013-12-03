@@ -59,4 +59,14 @@ public class WorkFlows {
         return false;
     }
     
+    public static boolean viewDietitionPanel() {
+        Session session = Session.getSession();
+        if ( session.canPrescribe ) {
+            new dietitianhome( session.getFirstName(), session.getLastName() )
+                    .setVisible(true);
+            return true;
+        }
+        return false;
+    }
+    
 }
