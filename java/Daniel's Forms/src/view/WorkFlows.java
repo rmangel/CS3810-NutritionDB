@@ -46,8 +46,7 @@ public class WorkFlows {
             String lname = session.getLastName();
             
             JOptionPane.showMessageDialog(rootPane, "Login Successful");
-            usermain umain = new usermain(fname, lname);
-            umain.setVisible(true);
+            viewMealPlanner();
             return true;
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -72,6 +71,11 @@ public class WorkFlows {
     public static void signOut() {
         Session.signOut();
         new view.login().setVisible(true);
+    }
+    public static void viewMealPlanner() {
+        Session session = Session.getSession();
+        new usermain( session.getFirstName(), session.getLastName() )
+                .setVisible(true);
     }
     
 }
