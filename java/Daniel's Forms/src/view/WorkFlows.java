@@ -69,4 +69,9 @@ public class WorkFlows {
         return false;
     }
     
+    public static void signOut() {
+        Session.signOut();
+        new view.login().setVisible(true);
+    }
+    
 }
