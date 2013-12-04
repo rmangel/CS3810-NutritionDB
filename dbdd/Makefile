@@ -12,6 +12,7 @@ compile: $(OBJ)
 
 SOURCELISTING:
 	ln -fs ../java/Daniel\'s\ Forms/ prj.link
+	mkdir -p gen
 	./get-source-listing.sh > gen/java-source-listing.tex
 clean:
 	rm -f *.aux *.log *.pdf *.toc *.backup
