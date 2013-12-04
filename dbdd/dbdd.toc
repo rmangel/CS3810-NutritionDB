@@ -18,5 +18,9 @@
 \contentsline {subsection}{\numberline {4.1}Relations DDL}{6}
 \contentsline {section}{\numberline {5}Design Process}{10}
 \contentsline {subsection}{\numberline {5.1}Automated Processing of Data Modeler DDL Output}{10}
-\contentsline {section}{\numberline {6}Testing}{10}
-\contentsline {subsection}{\numberline {6.1}Inserting Test Data DDL}{10}
+\contentsline {section}{Appendices}{10}
+\contentsline {section}{\numberline {A}Bash Scripts}{10}
+\contentsline {subsection}{\numberline {A.1}Data Modeler to SQL Conversion}{10}
+\contentsline {subsection}{\numberline {A.2}Data Design Language}{11}
+\contentsline {section}{\numberline {B}Testing}{14}
+\contentsline {subsection}{\numberline {B.1}Data Insertion}{14}
