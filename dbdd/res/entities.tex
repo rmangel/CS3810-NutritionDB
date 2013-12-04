@@ -1,18 +1,49 @@
 \begin{enumerate}
 \item Attributes
+-- Defines attributes by name.
 \item Courses
+-- Defines courses by name with the servings.
 \item DayPlans
+-- Deprecated.
 \item Dietition
+-- Defines users with elevated permissions.
+They differ from standard users only in that they can prescribe dietary
+recommendations.
 \item Emails
+-- Defines emails per user.
+Each email is unique to a user.
 \item Ingredients
+-- Defines ingredients by name.
+For example,
+cooking items such as salt, pepper, oil, eggs, and wafles are all ingredients.
 \item IngredientsCourses
+-- Defines a relationship between ingredients and courses.
+There are two attributes corresponding to the public keys of
+each table respectively, of course.
 \item Meals
+-- Defines meals by names.
+Meals are made of courses.
+For example,
+the American breakfast consists of eggs, bacon, and sausage.
 \item UserSelectedMeals
+-- Defines meals that appear on a user's schedule for a specific day.
 \item MealsCourses
+-- Defines the many to many relationship between meals and courses.
 \item MealsFoodAttributes
+-- Defines the many to many relationship between meals and attributes.
 \item Prescription
+-- Defines a dietary description for a user and made on a certain date.
 \item PrescriptionAttributes
+-- Defines a many to many relationship between prescription and attributes.
 \item Ratings
+-- Defines a many to many relationship between users and meals with a rating from 0 to 5 stars.
 \item UserType
+-- Defines different types of users.
+We are not sure of the user for this, yet.
+This table maybe deprecated.
 \item Users
+-- Defines a user with a first name, last name, user name, gender,
+password, and user type.
+The user type attribute may be deprecated soon.
+
 \end{enumerate}
