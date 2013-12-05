@@ -32,10 +32,10 @@
                       <Component id="jLabel1" min="-2" pref="460" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel1" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
               <Component id="canvas1" min="-2" max="-2" attributes="0"/>
@@ -175,17 +175,17 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Component id="btnMealBack" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="lblMealName" min="-2" pref="260" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="btnMealForward" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -194,15 +194,13 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="lblCourseList" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblIngredientList" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lblNutrition" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jButton1" min="-2" pref="132" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="lblNutrition" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jButton1" min="-2" pref="132" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -214,15 +212,19 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblMealName" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnMealBack" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnMealForward" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lblCourseList" min="-2" max="-2" attributes="0"/>
@@ -235,7 +237,6 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lblNutrition" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
