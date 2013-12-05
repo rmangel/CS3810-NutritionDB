@@ -240,7 +240,7 @@ Each user will have a user name, First and last name, and email address.
 Each user may have many meal plans (usually not more than 3 or less than 1) per day.
 \begin{enumerate}
 \item
-A meal plan is a list of meals per day.
+A meal plan (or called user selected meals) is a list of meals per day per user.
 \end{enumerate}
 \item
 Each user will have a list of favorite meals.
@@ -253,15 +253,22 @@ The system will determine the average rating per meal.
 There will be a GUI.
 \begin{enumerate}
 \item
-The GUI will be a set of views. Where each view is tailored to the user type and the activity.
+The GUI will be a set of views. Where each view is tailored to the activity.
 \begin{enumerate}
 \item
-The user type may be “limited” or may be “admin”.
+The user type may be “limited”, "dietition", or may be “admin”.
 \begin{enumerate}
 \item
 “limited” types will be limited on which activities they can interact with.
+This type will be able to have daily meal plans, a favorite meals list,
+and set dietary preferences.
+This type will be allowed to print shopping lists as well.
+\item
+"dietition" types will like a "limited" user
+only with the ability to prescribe dietary recommendations for other users.
 \item
 “admin” types will have no limits on which activities they can interact with.
+The primary role will be in maintaining and correcting errors in the database.
 \end{enumerate}
 \item
 Each activity will take a specific action on the database or obtain results.
@@ -269,19 +276,9 @@ Each activity will take a specific action on the database or obtain results.
 \item
 Find Meals: this activity will allow the user to find a meal from the list of available meals.
 \item
-Add Meal: this allows the user to add a meal to a particular day plan.
-\item
-Remove Meal: this allows the user to remove a meal from a particular day plan.
+View Meal Plan: this activity will allow the user to add, remove, rate, and favorite meals.
 \item
 View/Print Shopping List: this allows the user to generate and print a shopping list for day’s or a set of days’ meal plans.
-\item
-Rate Meal: this allows the user to give the system feedback per meal on a scale of 0 to 5 stars.
-\item
-Change Meal (admin): allows the user to modify the courses in the meal.
-\item
-Change Course (admin): allows the user to modify the ingredients in the course.
-\item
-Change Stores (admin): allows the user to associate or unassociate stores with ingredients and also to change the price.
 \end{enumerate}
 \end{enumerate}
 \end{enumerate}
