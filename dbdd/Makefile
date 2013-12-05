@@ -11,7 +11,7 @@ compile: $(OBJ)
 	pdflatex -interaction=nonstopmode -halt-on-error $<
 
 SOURCELISTING:
-	ln -fs ../java/Daniel\'s\ Forms/ prj.link
+	ln -fs ../java prj.link
 	mkdir -p gen
 	./get-source-listing.sh > gen/java-source-listing.tex
 clean:
