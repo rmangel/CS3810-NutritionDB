@@ -96,7 +96,7 @@ public class usermain extends javax.swing.JFrame {
         btnSignOut = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        btnDateForward = new javax.swing.JButton();
+        btnMealForward = new javax.swing.JButton();
         lblMealName = new javax.swing.JLabel();
         btnMealBack = new javax.swing.JButton();
         lblNutrition = new javax.swing.JLabel();
@@ -107,7 +107,7 @@ public class usermain extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        btnMealForward = new javax.swing.JButton();
+        btnDateForward = new javax.swing.JButton();
         lblDate = new javax.swing.JLabel();
         btnDateBack = new javax.swing.JButton();
 
@@ -158,10 +158,10 @@ public class usermain extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         jPanel1.setSize(new java.awt.Dimension(460, 100));
 
-        btnDateForward.setText(">");
-        btnDateForward.addActionListener(new java.awt.event.ActionListener() {
+        btnMealForward.setText(">");
+        btnMealForward.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDateForwardActionPerformed(evt);
+                btnMealForwardActionPerformed(evt);
             }
         });
 
@@ -201,10 +201,10 @@ public class usermain extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
-        btnMealForward.setText(">");
-        btnMealForward.addActionListener(new java.awt.event.ActionListener() {
+        btnDateForward.setText(">");
+        btnDateForward.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMealForwardActionPerformed(evt);
+                btnDateForwardActionPerformed(evt);
             }
         });
 
@@ -230,7 +230,7 @@ public class usermain extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnMealForward, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnDateForward, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -240,7 +240,7 @@ public class usermain extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDateBack)
                     .addComponent(lblDate)
-                    .addComponent(btnMealForward)))
+                    .addComponent(btnDateForward)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -255,7 +255,7 @@ public class usermain extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblMealName, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnDateForward))
+                        .addComponent(btnMealForward))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,7 +282,7 @@ public class usermain extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMealName)
                     .addComponent(btnMealBack)
-                    .addComponent(btnDateForward))
+                    .addComponent(btnMealForward))
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -372,9 +372,9 @@ public class usermain extends javax.swing.JFrame {
     this.updateMeal( this.currentMeal - 1 );
   }//GEN-LAST:event_btnMealBackActionPerformed
 
-  private void btnMealForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMealForwardActionPerformed
+  private void btnDateForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDateForwardActionPerformed
     this.updateMeal( this.currentMeal + 1 );
-  }//GEN-LAST:event_btnMealForwardActionPerformed
+  }//GEN-LAST:event_btnDateForwardActionPerformed
 
   private void btnDateBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDateBackActionPerformed
     Calendar cal = Calendar.getInstance();
@@ -383,12 +383,12 @@ public class usermain extends javax.swing.JFrame {
     this.updateDate( cal.getTime() );
   }//GEN-LAST:event_btnDateBackActionPerformed
 
-  private void btnDateForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDateForwardActionPerformed
+  private void btnMealForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMealForwardActionPerformed
     Calendar cal = Calendar.getInstance();
     cal.setTime( this.viewDate );
     cal.add( cal.DATE, 1 );
     this.updateDate( cal.getTime() );
-  }//GEN-LAST:event_btnDateForwardActionPerformed
+  }//GEN-LAST:event_btnMealForwardActionPerformed
 
     private void btnDietitionPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDietitionPanelActionPerformed
         if ( WorkFlows.viewDietitionPanel() ) {
